@@ -35,7 +35,7 @@ services:
     image: amkay/snmp_exporter
     volumes:
       - ./snmp_exporter/:/etc/snmp_exporter/
-    expose:
+    ports:
       - 9116:9116
 
   node-exporter:
