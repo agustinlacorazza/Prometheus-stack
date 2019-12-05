@@ -83,7 +83,7 @@ scrape_configs:
 
   #HPEMSA EXPORTER
 
-  - job_name: hpmsa
+ - job_name: 'hpmsa'
      scrape_interval: 30s
      scrape_timeout: 10s
      metrics_path: /metrics
