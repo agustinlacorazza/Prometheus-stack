@@ -61,9 +61,9 @@ scrape_configs:
       - 'tasks.node-exporter'
       type: 'A'
       port: 9100
-    
-#     static_configs:
-#          - targets: ['node-exporter:9100']
+
+ #SNMP Palo Alto Exporter
+
   - job_name: 'snmp'
     scrape_interval: 5s
     static_configs:
@@ -80,3 +80,32 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: '192.168.8.13:9116'  # SNMP exporter.
+
+  #HPEMSA EXPORTER
+
+  - job_name: hpmsa
+     scrape_interval: 30s
+     scrape_timeout: 10s
+     metrics_path: /metrics
+     scheme: http
+     static_configs:
+      - targets:
+       - http://192.168.101.42/
+    relabel_configs:
+    - source_labels: [__address__]
+	    separator: ;
+	    egex: (.*)
+	    target_label: __param_target
+	    replacement: $1
+	    action: replace
+   - source_labels: [__param_target]
+	    separator: ;
+	    egex: (.*)
+	    target_label: instance
+	    replacement: $1
+	    action: replace
+    - separator: ;
+	    regex: (.*)
+	    target_label: __address__
+	    replacement: localhost:9114
+	    action: replace
