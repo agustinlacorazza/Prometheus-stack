@@ -81,31 +81,30 @@ scrape_configs:
       - target_label: __address__
         replacement: '192.168.8.13:9116'  # SNMP exporter.
 
-  #HPEMSA EXPORTER
-
- - job_name: 'hpmsa'
-     scrape_interval: 30s
-     scrape_timeout: 10s
-     metrics_path: /metrics
-     scheme: http
-     static_configs:
+  
+  - job_name: 'hpmsa'
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
       - targets:
-       - http://192.168.101.42/
+      - 192.168.101.42
     relabel_configs:
     - source_labels: [__address__]
 	    separator: ;
-	    egex: (.*)
+	    regex: (.*)
 	    target_label: __param_target
 	    replacement: $1
 	    action: replace
    - source_labels: [__param_target]
 	    separator: ;
-	    egex: (.*)
+	    regex: (.*)
 	    target_label: instance
 	    replacement: $1
 	    action: replace
     - separator: ;
 	    regex: (.*)
 	    target_label: __address__
-	    replacement: localhost:9114
+	    replacement: 'localhost:9114'
 	    action: replace
