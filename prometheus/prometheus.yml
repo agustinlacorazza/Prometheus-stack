@@ -90,18 +90,18 @@ scrape_configs:
       - 192.168.101.42
     relabel_configs:
       - source_labels: [__address__]
-        separator: ;
+        separator: ";"
         regex: (.*)
         target_label: __param_target
         replacement: $1
         action: replace
-    - source_labels: [__param_target]
-         separator: ;
+      - source_labels: [__param_target]
+         separator: ";"
          regex: (.*)
          target_label: instance
          replacement: $1
          action: replace
-    - separator: ;
+      - separator: ;
         regex: (.*)
         target_label: __address__
         replacement: "localhost:9114"
