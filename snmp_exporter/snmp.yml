@@ -35,8 +35,7 @@ apcups:
     type: DisplayString
     help: A textual string containing information about the interface - 1.3.6.1.2.1.2.2.1.2
     indexes:
-    - labelname: ifIndex
-      type: gauge
+    - labelname: ifIn0
   - name: ifType
     oid: 1.3.6.1.2.1.2.2.1.3
     type: EnumAsInfo

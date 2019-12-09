@@ -72,7 +72,7 @@ scrape_configs:
         - 192.168.101.231 # Palo Alto 02
     metrics_path: /snmp
     params:
-      module: [paloalto_fw]
+     module: [paloalto_fw]
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -104,5 +104,35 @@ scrape_configs:
       - separator: ;
         regex: (.*)
         target_label: __address__
-        replacement: "localhost:9114"
+        replacement: "192.168.8.13:9114"
         action: "replace"
+
+  # ------------ Vcenter Config -------------
+  # -job_name: 'vmware_vcenter'
+  #  metrics_path: '/metrics'
+  #  static_configs:
+  #    - targets:
+  #      - "vcenter.company.com"
+  #  relabel_configs:
+  #    - source_labels: [__address__]
+  #      target_label: __param_target
+  #    - source_labels: [__param_target]
+  #      target_label: instance
+  #    - target_label: __address__
+  #      replacement: "192.168.8.13:9272"
+  #
+
+  - job_name: 'vmware_esx'
+    metrics_path: '/metrics'
+    file_sd_configs:
+    - files:
+       - /etc/prometheus/esx.yml
+      params:
+      section: [esx]
+      relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 192.168.8.13:9272
