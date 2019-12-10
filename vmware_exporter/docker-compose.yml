@@ -5,16 +5,14 @@ services:
     image: pryorda/vmware_exporter:latest
     ports:
         - "9275:9272"
-   
     environment:
-        VSPHERE_HOST: "192.168.8.13"
-        VSPHERE_USER: "root"
-        VSPHERE_PASSWORD: "pr1m4r1*"
+        VSPHERE_HOST: "vcenter-host"
+        VSPHERE_USER: "username"
+        VSPHERE_PASSWORD: "P@ssw0rd"
         VSPHERE_IGNORE_SSL: "True"
-        VSPHERE_COLLECT_VMS: "True"
-        VSPHERE_COLLECT_VMGUESTS: "True"
+        VSPHERE_COLLECT_VMS: "False"
+        VSPHERE_COLLECT_VMGUESTS: "False"
     restart: always
-
-
     #FOR DEBUG UNCOMMENT NEXT LINE
     #command: ["-l","DEBUG"]
+    
