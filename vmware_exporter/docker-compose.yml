@@ -7,12 +7,12 @@ services:
         - "9275:9272"
    
     environment:
-        VSPHERE_HOST: "vcenter-host"
-        VSPHERE_USER: "username"
-        VSPHERE_PASSWORD: "P@ssw0rd"
+        VSPHERE_HOST: "192.168.8.13"
+        VSPHERE_USER: "root"
+        VSPHERE_PASSWORD: "pr1m4r1*"
         VSPHERE_IGNORE_SSL: "True"
-        VSPHERE_COLLECT_VMS: "False"
-        VSPHERE_COLLECT_VMGUESTS: "False"
+        VSPHERE_COLLECT_VMS: "True"
+        VSPHERE_COLLECT_VMGUESTS: "True"
     restart: always
 
 
