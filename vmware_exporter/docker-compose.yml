@@ -5,11 +5,7 @@ services:
     image: pryorda/vmware_exporter:latest
     ports:
         - "9275:9272"
-    volumes:
-      - ./vmware_exporter/:/etc/vmware_exporter/
-
-    command: --config.file=/etc/vmware_exporter/esx.yml
-    
+   
     environment:
         VSPHERE_HOST: "vcenter-host"
         VSPHERE_USER: "username"
