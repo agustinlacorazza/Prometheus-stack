@@ -1,10 +1,15 @@
+default:
+  vmware_user: 'administrator@vsphere.local'
+  vmware_password: 'Er4545'
+  ignore_ssl: True
+
 
 esx:
-    vsphere_host: 192.168.8.80 
-    vsphere_user: 'root'
-    vsphere_password: 'pr1m4r1*'
-    ignore_ssl: True
-    collect_only:
-        vms: False
-        datastores: False
-        hosts: True
+  vsphere_host: 192.168.8.80 
+  vsphere_user: 'root'
+  vsphere_password: 'pr1m4r1*'
+  ignore_ssl: True
+  collect_only:
+    vms: True
+    datastores: True
+    hosts: True
