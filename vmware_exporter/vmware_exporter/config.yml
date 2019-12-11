@@ -1,9 +1,9 @@
 default:
-vmware_user: 'administrator@vsphere.local'
-vmware_password: 'allar430'
-ignore_ssl: True
+  vmware_user: 'administrator@vsphere.local'
+  vmware_password: 'allar430'
+  ignore_ssl: True
 
 esx:
-vmware_user: 'root'
-vmware_password: 'primary*'
-ignore_ssl: True
+  vmware_user: 'root'
+  vmware_password: 'primary*'
+  ignore_ssl: True
