@@ -118,7 +118,8 @@ services:
     #   - "sleep 3600" 
     command:
       - "-c"
-      - "/usr/local/bin/vmware_exporter -c config.yml" 
+      - "/usr/local/bin/vmware_exporter -c config.yml -l DEBUG" 
+
 
     
     
