@@ -2,6 +2,33 @@ GF_SECURITY_ADMIN_PASSWORD=pr1m4r1.1nfr4
 GF_USERS_ALLOW_SIGN_UP=true
 
 
+#################################### SMTP / Emailing #####################
+
+[smtp]
+
+enabled = true
+
+host = smtp-relay.gmail.com:25
+
+user = 
+
+# If the password contains # or ; you have to wrap it with triple quotes. Ex """#password;"""
+
+password = 
+
+cert_file =
+
+key_file =
+
+skip_verify = false
+
+from_address = admin@grafana.localhost
+
+from_name = Grafana
+
+ehlo_identity =
+
+
 [auth]
 
 # Login cookie name
