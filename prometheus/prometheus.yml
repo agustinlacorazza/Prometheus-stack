@@ -104,6 +104,23 @@ scrape_configs:
       - target_label: __address__
         replacement: '192.168.18.13:9116'  # SNMP exporter.
 
+  - job_name: 'MSA-2500'
+    scrape_interval: 5s
+    static_configs:
+      - targets:
+        - 192.168.101.42 # Storage san A
+    metrics_path: /snmp
+    params:
+     module: [hp-msa2500]
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: '192.168.18.13:9116'  # SNMP exporter.
+
+
   - job_name: 'hpmsa'
     scrape_interval: 30s
     metrics_path: /metrics
