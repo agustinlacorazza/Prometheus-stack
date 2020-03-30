@@ -1,7 +1,7 @@
 esx:
-    vsphere_host: 192.168.18.80 
-    vsphere_user: 'root'
-    vsphere_password: 'pr1m4r1*'
+    vsphere_host: https://ringo-vcenter-01.primary/
+    vsphere_user: 'administrator@matba.rofex'
+    vsphere_password: 'Pr1m4r1.1nfr4'
     ignore_ssl: True
     collect_only:
         vms: False

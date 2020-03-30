@@ -147,11 +147,11 @@ scrape_configs:
         replacement: "192.168.18.13:9114"
         action: "replace"
 
-  - job_name: 'vmware_esx'
+  - job_name: 'vcenter_ringo'
     metrics_path: '/metrics'
     static_configs:
       - targets:
-          - '192.168.18.80'       
+          - 'https://ringo-vcenter-01.primary/'       
     params:
       section: [esx]
     relabel_configs:
