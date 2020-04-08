@@ -3,8 +3,11 @@
 
  receivers:
      - name: 'slack'
-#       slack_configs:
-#           - send_resolved: true
-#             username: '<username>'
-#             channel: '#<channel-name>'
-#             api_url: '<incomming-webhook-url>'
+       slack_configs:
+           - send_resolved: true
+             username: 'Prometheus-Bot'
+             channel: 'prometheus-infra'
+             api_url: 'https://hooks.slack.com/services/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'
+             icon_url: https://avatars3.githubusercontent.com/u/3380462
+             send_resolved: true
+             text: " \nsummary: {{ .CommonAnnotations.summary }}\ndescription: {{ .CommonAnnotations.description }} 

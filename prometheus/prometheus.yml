@@ -10,10 +10,10 @@ global:
       monitor: 'my-project'
 
 remote_write:
-  - url: "http://192.168.18.70:8086/api/v1/prom/write?u=prome&p=pr0m3&db=prometheus"
+  - url: "http://192.168.18.70:8086/api/v1/prom/write?u=monitoring&p=m0n1t0r1ng&db=monitoring2"
  # Remote read configuration (for InfluxDB only at the moment).
 remote_read:
-  - url: "http://192.168.18.70:8086/api/v1/prom/read?u=prome&p=pr0m3&db=prometheus"
+  - url: "http://192.168.18.70:8086/api/v1/prom/read?u=monitoring&p=m0n1t0r1ng&db=monitoring2"  
 
 
 # Load and evaluate rules in this file every 'evaluation_interval' seconds.
@@ -28,7 +28,7 @@ alerting:
   - scheme: http
     static_configs:
     - targets:
-      - "alertmanager:9093"
+      - "localhost:9093"
 
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
