@@ -104,11 +104,11 @@ scrape_configs:
       - target_label: __address__
         replacement: '192.168.18.13:9116'  # SNMP exporter.
   
-  - job_name: 'Catalyst-2060-borde'
-  scrape_interval: 5s
-  static_configs:
-    - targets:
-      - 192.168.143.242      # switche borde target
+ - job_name: 'Catalyst-2060-borde'
+   scrape_interval: 5s
+   static_configs:
+     - targets:
+       - 192.168.143.242      # switche borde target
   metrics_path: /snmp
   params:
    module: [if-mib-2060]
