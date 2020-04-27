@@ -3795,3 +3795,5326 @@ paloalto_fw:
     indexes:
     - labelname: hrFSIndex
       type: gauge
+if-mib-2060:
+  walk:
+  - 1.3.6.1.2
+  - 1.3.6.1.6
+  metrics:
+  - name: ifTableLastChange
+    oid: 1.3.6.1.2.1.31.1.5
+    type: gauge
+    help: The value of sysUpTime at the time of the last creation or deletion of an
+      entry in the ifTable - 1.3.6.1.2.1.31.1.5
+  - name: ifName
+    oid: 1.3.6.1.2.1.31.1.1.1.1
+    type: DisplayString
+    help: The textual name of the interface - 1.3.6.1.2.1.31.1.1.1.1
+  - name: ifInMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.2
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a multicast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.2
+  - name: ifInBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.3
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a broadcast address at this sub-layer. - 1.3.6.1.2.1.31.1.1.1.3
+  - name: ifOutMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.4
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a multicast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.4
+  - name: ifOutBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.5
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a broadcast address at this sub-layer, including
+      those that were discarded or not sent. - 1.3.6.1.2.1.31.1.1.1.5
+  - name: ifHCInOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.6
+    type: counter
+    help: The total number of octets received on the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.6
+  - name: ifHCInUcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.7
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were not addressed to a multicast or broadcast address at this sub-layer
+      - 1.3.6.1.2.1.31.1.1.1.7
+  - name: ifHCInMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.8
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a multicast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.8
+  - name: ifHCInBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.9
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a broadcast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.9
+  - name: ifHCOutOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.10
+    type: counter
+    help: The total number of octets transmitted out of the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.10
+  - name: ifHCOutUcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.11
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were not addressed to a multicast or broadcast address at this sub-layer,
+      including those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.11
+  - name: ifHCOutMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.12
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a multicast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.12
+  - name: ifHCOutBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.13
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a broadcast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.13
+  - name: ifLinkUpDownTrapEnable
+    oid: 1.3.6.1.2.1.31.1.1.1.14
+    type: gauge
+    help: Indicates whether linkUp/linkDown traps should be generated for this interface
+      - 1.3.6.1.2.1.31.1.1.1.14
+    enum_values:
+      1: enabled
+      2: disabled
+  - name: ifHighSpeed
+    oid: 1.3.6.1.2.1.31.1.1.1.15
+    type: gauge
+    help: An estimate of the interface's current bandwidth in units of 1,000,000 bits
+      per second - 1.3.6.1.2.1.31.1.1.1.15
+  - name: ifPromiscuousMode
+    oid: 1.3.6.1.2.1.31.1.1.1.16
+    type: gauge
+    help: This object has a value of false(2) if this interface only accepts packets/frames
+      that are addressed to this station - 1.3.6.1.2.1.31.1.1.1.16
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: ifConnectorPresent
+    oid: 1.3.6.1.2.1.31.1.1.1.17
+    type: gauge
+    help: This object has the value 'true(1)' if the interface sublayer has a physical
+      connector and the value 'false(2)' otherwise. - 1.3.6.1.2.1.31.1.1.1.17
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: ifAlias
+    oid: 1.3.6.1.2.1.31.1.1.1.18
+    type: DisplayString
+    help: This object is an 'alias' name for the interface as specified by a network
+      manager, and provides a non- volatile 'handle' for the interface - 1.3.6.1.2.1.31.1.1.1.18
+  - name: ifStackHigherLayer
+    oid: 1.3.6.1.2.1.31.1.2.1.1
+    type: gauge
+    help: The value of ifIndex corresponding to the higher sub-layer of the relationship,
+      i.e., the sub-layer which runs on 'top' of the sub-layer identified by the corresponding
+      instance of ifStackLowerLayer - 1.3.6.1.2.1.31.1.2.1.1
+    indexes:
+    - labelname: ifStackHigherLayer
+      type: gauge
+    - labelname: ifStackLowerLayer
+      type: gauge
+  - name: ifStackLowerLayer
+    oid: 1.3.6.1.2.1.31.1.2.1.2
+    type: gauge
+    help: The value of ifIndex corresponding to the lower sub- layer of the relationship,
+      i.e., the sub-layer which runs 'below' the sub-layer identified by the corresponding
+      instance of ifStackHigherLayer - 1.3.6.1.2.1.31.1.2.1.2
+    indexes:
+    - labelname: ifStackHigherLayer
+      type: gauge
+    - labelname: ifStackLowerLayer
+      type: gauge
+  - name: ifStackStatus
+    oid: 1.3.6.1.2.1.31.1.2.1.3
+    type: gauge
+    help: The status of the relationship between two sub- layers - 1.3.6.1.2.1.31.1.2.1.3
+    indexes:
+    - labelname: ifStackHigherLayer
+      type: gauge
+    - labelname: ifStackLowerLayer
+      type: gauge
+    enum_values:
+      1: active
+      2: notInService
+      3: notReady
+      4: createAndGo
+      5: createAndWait
+      6: destroy
+  - name: ifStackLastChange
+    oid: 1.3.6.1.2.1.31.1.6
+    type: gauge
+    help: The value of sysUpTime at the time of the last change of the (whole) interface
+      stack - 1.3.6.1.2.1.31.1.6
+  - name: ifTestId
+    oid: 1.3.6.1.2.1.31.1.3.1.1
+    type: gauge
+    help: This object identifies the current invocation of the interface's test. -
+      1.3.6.1.2.1.31.1.3.1.1
+  - name: ifTestStatus
+    oid: 1.3.6.1.2.1.31.1.3.1.2
+    type: gauge
+    help: This object indicates whether or not some manager currently has the necessary
+      'ownership' required to invoke a test on this interface - 1.3.6.1.2.1.31.1.3.1.2
+    enum_values:
+      1: notInUse
+      2: inUse
+  - name: ifTestResult
+    oid: 1.3.6.1.2.1.31.1.3.1.4
+    type: gauge
+    help: This object contains the result of the most recently requested test, or
+      the value none(1) if no tests have been requested since the last reset - 1.3.6.1.2.1.31.1.3.1.4
+    enum_values:
+      1: none
+      2: success
+      3: inProgress
+      4: notSupported
+      5: unAbleToRun
+      6: aborted
+      7: failed
+  - name: ifTestOwner
+    oid: 1.3.6.1.2.1.31.1.3.1.6
+    type: DisplayString
+    help: The entity which currently has the 'ownership' required to invoke a test
+      on this interface. - 1.3.6.1.2.1.31.1.3.1.6
+  - name: applIndex
+    oid: 1.3.6.1.2.1.27.1.1.1
+    type: gauge
+    help: An index to uniquely identify the network service application. - 1.3.6.1.2.1.27.1.1.1
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applName
+    oid: 1.3.6.1.2.1.27.1.1.2
+    type: DisplayString
+    help: The name the network service application chooses to be known by. - 1.3.6.1.2.1.27.1.1.2
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applDirectoryName
+    oid: 1.3.6.1.2.1.27.1.1.3
+    type: OctetString
+    help: The Distinguished Name of the directory entry where static information about
+      this application is stored - 1.3.6.1.2.1.27.1.1.3
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applVersion
+    oid: 1.3.6.1.2.1.27.1.1.4
+    type: DisplayString
+    help: The version of network service application software. - 1.3.6.1.2.1.27.1.1.4
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applUptime
+    oid: 1.3.6.1.2.1.27.1.1.5
+    type: gauge
+    help: The value of sysUpTime at the time the network service application was last
+      initialized - 1.3.6.1.2.1.27.1.1.5
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applOperStatus
+    oid: 1.3.6.1.2.1.27.1.1.6
+    type: gauge
+    help: Indicates the operational status of the network service application - 1.3.6.1.2.1.27.1.1.6
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    enum_values:
+      1: up
+      2: down
+      3: halted
+      4: congested
+      5: restarting
+  - name: applLastChange
+    oid: 1.3.6.1.2.1.27.1.1.7
+    type: gauge
+    help: The value of sysUpTime at the time the network service application entered
+      its current operational state - 1.3.6.1.2.1.27.1.1.7
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applInboundAssociations
+    oid: 1.3.6.1.2.1.27.1.1.8
+    type: gauge
+    help: The number of current associations to the network service application, where
+      it is the responder - 1.3.6.1.2.1.27.1.1.8
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applOutboundAssociations
+    oid: 1.3.6.1.2.1.27.1.1.9
+    type: gauge
+    help: The number of current associations to the network service application, where
+      it is the initiator - 1.3.6.1.2.1.27.1.1.9
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applAccumulatedInboundAssociations
+    oid: 1.3.6.1.2.1.27.1.1.10
+    type: counter
+    help: The total number of associations to the application entity since application
+      initialization, where it was the responder - 1.3.6.1.2.1.27.1.1.10
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applAccumulatedOutboundAssociations
+    oid: 1.3.6.1.2.1.27.1.1.11
+    type: counter
+    help: The total number of associations to the application entity since application
+      initialization, where it was the initiator - 1.3.6.1.2.1.27.1.1.11
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applLastInboundActivity
+    oid: 1.3.6.1.2.1.27.1.1.12
+    type: gauge
+    help: The value of sysUpTime at the time this application last had an inbound
+      association - 1.3.6.1.2.1.27.1.1.12
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applLastOutboundActivity
+    oid: 1.3.6.1.2.1.27.1.1.13
+    type: gauge
+    help: The value of sysUpTime at the time this application last had an outbound
+      association - 1.3.6.1.2.1.27.1.1.13
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applRejectedInboundAssociations
+    oid: 1.3.6.1.2.1.27.1.1.14
+    type: counter
+    help: The total number of inbound associations the application entity has rejected,
+      since application initialization. - 1.3.6.1.2.1.27.1.1.14
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: applFailedOutboundAssociations
+    oid: 1.3.6.1.2.1.27.1.1.15
+    type: counter
+    help: The total number associations where the application entity is initiator
+      and association establishment has failed, since application initialization.
+      - 1.3.6.1.2.1.27.1.1.15
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: assocIndex
+    oid: 1.3.6.1.2.1.27.2.1.1
+    type: gauge
+    help: An index to uniquely identify each association for a network service application.
+      - 1.3.6.1.2.1.27.2.1.1
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: assocIndex
+      type: gauge
+  - name: assocRemoteApplication
+    oid: 1.3.6.1.2.1.27.2.1.2
+    type: DisplayString
+    help: The name of the system running remote network service application - 1.3.6.1.2.1.27.2.1.2
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: assocIndex
+      type: gauge
+  - name: assocApplicationType
+    oid: 1.3.6.1.2.1.27.2.1.4
+    type: gauge
+    help: This indicates whether the remote application is some type of client making
+      use of this network service (e.g - 1.3.6.1.2.1.27.2.1.4
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: assocIndex
+      type: gauge
+    enum_values:
+      1: ua-initiator
+      2: ua-responder
+      3: peer-initiator
+      4: peer-responder
+  - name: assocDuration
+    oid: 1.3.6.1.2.1.27.2.1.5
+    type: gauge
+    help: The value of sysUpTime at the time this association was started - 1.3.6.1.2.1.27.2.1.5
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: assocIndex
+      type: gauge
+  - name: rdbmsDbIndex
+    oid: 1.3.6.1.2.1.39.1.1.1.1
+    type: gauge
+    help: A numeric index, unique among all the databases from all products on this
+      host - 1.3.6.1.2.1.39.1.1.1.1
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbVendorName
+    oid: 1.3.6.1.2.1.39.1.1.1.3
+    type: DisplayString
+    help: The name of the vendor whose RDBMS manages this database, for informational
+      purposes. - 1.3.6.1.2.1.39.1.1.1.3
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbName
+    oid: 1.3.6.1.2.1.39.1.1.1.4
+    type: DisplayString
+    help: The name of this database, in a product specific format - 1.3.6.1.2.1.39.1.1.1.4
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbContact
+    oid: 1.3.6.1.2.1.39.1.1.1.5
+    type: DisplayString
+    help: The textual identification of the contact person for this managed database,
+      together with information on how to contact this person - 1.3.6.1.2.1.39.1.1.1.5
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbInfoProductName
+    oid: 1.3.6.1.2.1.39.1.2.1.1
+    type: DisplayString
+    help: The textual product name of the server that created or last restructured
+      this database - 1.3.6.1.2.1.39.1.2.1.1
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbInfoVersion
+    oid: 1.3.6.1.2.1.39.1.2.1.2
+    type: DisplayString
+    help: The version number of the server that created or last restructured this
+      database - 1.3.6.1.2.1.39.1.2.1.2
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbInfoSizeUnits
+    oid: 1.3.6.1.2.1.39.1.2.1.3
+    type: gauge
+    help: Identification of the units used to measure the size of this database in
+      rdbmsDbInfoSizeAllocated and rdbmsDbInfoSizeUsed - 1.3.6.1.2.1.39.1.2.1.3
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    enum_values:
+      1: bytes
+      2: kbytes
+      3: mbytes
+      4: gbytes
+      5: tbytes
+  - name: rdbmsDbInfoSizeAllocated
+    oid: 1.3.6.1.2.1.39.1.2.1.4
+    type: gauge
+    help: The estimated size of this database (in rdbmsDbInfoSizeUnits), which is
+      the disk space that has been allocated to it and is no longer available to users
+      on this host - 1.3.6.1.2.1.39.1.2.1.4
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbInfoSizeUsed
+    oid: 1.3.6.1.2.1.39.1.2.1.5
+    type: gauge
+    help: The estimated size of this database, in rdbmsDbInfoSizeUnits, which is actually
+      in use for database data. - 1.3.6.1.2.1.39.1.2.1.5
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbInfoLastBackup
+    oid: 1.3.6.1.2.1.39.1.2.1.6
+    type: DateAndTime
+    help: The date and time that the latest complete or partial backup of the database
+      was taken - 1.3.6.1.2.1.39.1.2.1.6
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+  - name: rdbmsDbParamName
+    oid: 1.3.6.1.2.1.39.1.3.1.1
+    type: DisplayString
+    help: The name of a configuration parameter for a database - 1.3.6.1.2.1.39.1.3.1.1
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbParamName
+      type: DisplayString
+    - labelname: rdbmsDbParamSubIndex
+      type: gauge
+  - name: rdbmsDbParamSubIndex
+    oid: 1.3.6.1.2.1.39.1.3.1.2
+    type: gauge
+    help: The subindex value for this parameter - 1.3.6.1.2.1.39.1.3.1.2
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbParamName
+      type: DisplayString
+    - labelname: rdbmsDbParamSubIndex
+      type: gauge
+  - name: rdbmsDbParamCurrValue
+    oid: 1.3.6.1.2.1.39.1.3.1.4
+    type: DisplayString
+    help: The value for a configuration parameter now in effect, the actual setting
+      for the database - 1.3.6.1.2.1.39.1.3.1.4
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbParamName
+      type: DisplayString
+    - labelname: rdbmsDbParamSubIndex
+      type: gauge
+  - name: rdbmsDbParamComment
+    oid: 1.3.6.1.2.1.39.1.3.1.5
+    type: DisplayString
+    help: Annotation which describes the purpose of a configuration parameter or the
+      reason for a particular parameter's setting - 1.3.6.1.2.1.39.1.3.1.5
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbParamName
+      type: DisplayString
+    - labelname: rdbmsDbParamSubIndex
+      type: gauge
+  - name: rdbmsDbLimitedResourceName
+    oid: 1.3.6.1.2.1.39.1.4.1.1
+    type: DisplayString
+    help: The name of the resource, for instance 'global locks' or 'locks for the
+      FOO database', or 'data space on /dev/rdsk/5s0 for FOO' - 1.3.6.1.2.1.39.1.4.1.1
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbLimitedResourceName
+      type: DisplayString
+  - name: rdbmsDbLimitedResourceLimit
+    oid: 1.3.6.1.2.1.39.1.4.1.3
+    type: gauge
+    help: The maximum value the resource use may attain - 1.3.6.1.2.1.39.1.4.1.3
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbLimitedResourceName
+      type: DisplayString
+  - name: rdbmsDbLimitedResourceCurrent
+    oid: 1.3.6.1.2.1.39.1.4.1.4
+    type: gauge
+    help: The current value for the resource. - 1.3.6.1.2.1.39.1.4.1.4
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbLimitedResourceName
+      type: DisplayString
+  - name: rdbmsDbLimitedResourceHighwater
+    oid: 1.3.6.1.2.1.39.1.4.1.5
+    type: gauge
+    help: The maximum value of the resource seen since applUpTime was reset for the
+      earliest server which has the database actively opened - 1.3.6.1.2.1.39.1.4.1.5
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbLimitedResourceName
+      type: DisplayString
+  - name: rdbmsDbLimitedResourceFailures
+    oid: 1.3.6.1.2.1.39.1.4.1.6
+    type: counter
+    help: The number of times the system wanted to exceed the limit of the resource
+      since applUpTime was reset for the earliest server which has the database actively
+      opened - 1.3.6.1.2.1.39.1.4.1.6
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbLimitedResourceName
+      type: DisplayString
+  - name: rdbmsDbLimitedResourceDescription
+    oid: 1.3.6.1.2.1.39.1.4.1.7
+    type: DisplayString
+    help: A description of the resource and the meaning of the integer units used
+      for Limit, Current, and Highwater - 1.3.6.1.2.1.39.1.4.1.7
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: rdbmsDbLimitedResourceName
+      type: DisplayString
+  - name: rdbmsSrvVendorName
+    oid: 1.3.6.1.2.1.39.1.5.1.2
+    type: DisplayString
+    help: The name of the vendor whose RDBMS manages this database, for informational
+      purposes. - 1.3.6.1.2.1.39.1.5.1.2
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvProductName
+    oid: 1.3.6.1.2.1.39.1.5.1.3
+    type: DisplayString
+    help: The product name of this server - 1.3.6.1.2.1.39.1.5.1.3
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvContact
+    oid: 1.3.6.1.2.1.39.1.5.1.4
+    type: DisplayString
+    help: The textual identification of the contact person for this managed server,
+      together with information on how to contact this person - 1.3.6.1.2.1.39.1.5.1.4
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoStartupTime
+    oid: 1.3.6.1.2.1.39.1.6.1.1
+    type: DateAndTime
+    help: The date and time at which this server was last started. - 1.3.6.1.2.1.39.1.6.1.1
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoFinishedTransactions
+    oid: 1.3.6.1.2.1.39.1.6.1.2
+    type: gauge
+    help: The number of transactions visible to this server that have been completed
+      by either commit or abort - 1.3.6.1.2.1.39.1.6.1.2
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoDiskReads
+    oid: 1.3.6.1.2.1.39.1.6.1.3
+    type: counter
+    help: The total number of reads of database files issued to the operating system
+      by this server since startup - 1.3.6.1.2.1.39.1.6.1.3
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoLogicalReads
+    oid: 1.3.6.1.2.1.39.1.6.1.4
+    type: counter
+    help: The total number of logical reads of database files made internally by this
+      server since startup - 1.3.6.1.2.1.39.1.6.1.4
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoDiskWrites
+    oid: 1.3.6.1.2.1.39.1.6.1.5
+    type: counter
+    help: The total number of writes to database files issued to the operating system
+      by this server since startup - 1.3.6.1.2.1.39.1.6.1.5
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoLogicalWrites
+    oid: 1.3.6.1.2.1.39.1.6.1.6
+    type: counter
+    help: The total number of times parts of the database files have been marked 'dirty'
+      and in need of writing to the disk - 1.3.6.1.2.1.39.1.6.1.6
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoPageReads
+    oid: 1.3.6.1.2.1.39.1.6.1.7
+    type: counter
+    help: The total number of pages in database files read by this server since startup
+      - 1.3.6.1.2.1.39.1.6.1.7
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoPageWrites
+    oid: 1.3.6.1.2.1.39.1.6.1.8
+    type: counter
+    help: The total number of pages in database files written by this server since
+      startup - 1.3.6.1.2.1.39.1.6.1.8
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoDiskOutOfSpaces
+    oid: 1.3.6.1.2.1.39.1.6.1.9
+    type: counter
+    help: The total number of times the server has been unable to obtain disk space
+      that it wanted, since server startup - 1.3.6.1.2.1.39.1.6.1.9
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoHandledRequests
+    oid: 1.3.6.1.2.1.39.1.6.1.10
+    type: counter
+    help: The total number of requests made to the server on inbound associations
+      - 1.3.6.1.2.1.39.1.6.1.10
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoRequestRecvs
+    oid: 1.3.6.1.2.1.39.1.6.1.11
+    type: counter
+    help: The number of receive operations made processing any requests on inbound
+      associations - 1.3.6.1.2.1.39.1.6.1.11
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoRequestSends
+    oid: 1.3.6.1.2.1.39.1.6.1.12
+    type: counter
+    help: The number of send operations made processing requests handled on inbound
+      associations - 1.3.6.1.2.1.39.1.6.1.12
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoHighwaterInboundAssociations
+    oid: 1.3.6.1.2.1.39.1.6.1.13
+    type: gauge
+    help: The greatest number of inbound associations that have been simultaneously
+      open to this server since startup. - 1.3.6.1.2.1.39.1.6.1.13
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvInfoMaxInboundAssociations
+    oid: 1.3.6.1.2.1.39.1.6.1.14
+    type: gauge
+    help: The greatest number of inbound associations that can be simultaneously open
+      with this server - 1.3.6.1.2.1.39.1.6.1.14
+    indexes:
+    - labelname: applIndex
+      type: gauge
+  - name: rdbmsSrvParamName
+    oid: 1.3.6.1.2.1.39.1.7.1.1
+    type: DisplayString
+    help: The name of a configuration parameter for a server - 1.3.6.1.2.1.39.1.7.1.1
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvParamName
+      type: DisplayString
+    - labelname: rdbmsSrvParamSubIndex
+      type: gauge
+  - name: rdbmsSrvParamSubIndex
+    oid: 1.3.6.1.2.1.39.1.7.1.2
+    type: gauge
+    help: The subindex value for this parameter - 1.3.6.1.2.1.39.1.7.1.2
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvParamName
+      type: DisplayString
+    - labelname: rdbmsSrvParamSubIndex
+      type: gauge
+  - name: rdbmsSrvParamCurrValue
+    oid: 1.3.6.1.2.1.39.1.7.1.4
+    type: DisplayString
+    help: The value for a configuration parameter now in effect, the actual setting
+      for the server - 1.3.6.1.2.1.39.1.7.1.4
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvParamName
+      type: DisplayString
+    - labelname: rdbmsSrvParamSubIndex
+      type: gauge
+  - name: rdbmsSrvParamComment
+    oid: 1.3.6.1.2.1.39.1.7.1.5
+    type: DisplayString
+    help: Annotation which describes the purpose of a configuration parameter or the
+      reason for a particular parameter's setting - 1.3.6.1.2.1.39.1.7.1.5
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvParamName
+      type: DisplayString
+    - labelname: rdbmsSrvParamSubIndex
+      type: gauge
+  - name: rdbmsSrvLimitedResourceName
+    oid: 1.3.6.1.2.1.39.1.8.1.1
+    type: DisplayString
+    help: The name of the resource, for instance 'threads' or 'semaphores', or 'buffer
+      pages' - 1.3.6.1.2.1.39.1.8.1.1
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvLimitedResourceName
+      type: DisplayString
+  - name: rdbmsSrvLimitedResourceLimit
+    oid: 1.3.6.1.2.1.39.1.8.1.3
+    type: gauge
+    help: The maximum value the resource use may attain - 1.3.6.1.2.1.39.1.8.1.3
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvLimitedResourceName
+      type: DisplayString
+  - name: rdbmsSrvLimitedResourceCurrent
+    oid: 1.3.6.1.2.1.39.1.8.1.4
+    type: gauge
+    help: The current value for the resource. - 1.3.6.1.2.1.39.1.8.1.4
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvLimitedResourceName
+      type: DisplayString
+  - name: rdbmsSrvLimitedResourceHighwater
+    oid: 1.3.6.1.2.1.39.1.8.1.5
+    type: gauge
+    help: The maximum value of the resource seen since applUpTime was reset. - 1.3.6.1.2.1.39.1.8.1.5
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvLimitedResourceName
+      type: DisplayString
+  - name: rdbmsSrvLimitedResourceFailures
+    oid: 1.3.6.1.2.1.39.1.8.1.6
+    type: counter
+    help: The number of times the system wanted to exceed the limit of the resource
+      since applUpTime was reset. - 1.3.6.1.2.1.39.1.8.1.6
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvLimitedResourceName
+      type: DisplayString
+  - name: rdbmsSrvLimitedResourceDescription
+    oid: 1.3.6.1.2.1.39.1.8.1.7
+    type: DisplayString
+    help: A description of the resource and the meaning of the integer units used
+      for Limit, Current, and Highwater - 1.3.6.1.2.1.39.1.8.1.7
+    indexes:
+    - labelname: applIndex
+      type: gauge
+    - labelname: rdbmsSrvLimitedResourceName
+      type: DisplayString
+  - name: rdbmsRelState
+    oid: 1.3.6.1.2.1.39.1.9.1.1
+    type: gauge
+    help: The state of this server's access to this database - 1.3.6.1.2.1.39.1.9.1.1
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: applIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: active
+      3: available
+      4: restricted
+      5: unavailable
+  - name: rdbmsRelActiveTime
+    oid: 1.3.6.1.2.1.39.1.9.1.2
+    type: DateAndTime
+    help: The time the database was made active by the server - 1.3.6.1.2.1.39.1.9.1.2
+    indexes:
+    - labelname: rdbmsDbIndex
+      type: gauge
+    - labelname: applIndex
+      type: gauge
+  - name: hrSystemUptime
+    oid: 1.3.6.1.2.1.25.1.1
+    type: gauge
+    help: The amount of time since this host was last initialized - 1.3.6.1.2.1.25.1.1
+  - name: hrSystemDate
+    oid: 1.3.6.1.2.1.25.1.2
+    type: DateAndTime
+    help: The host's notion of the local date and time of day. - 1.3.6.1.2.1.25.1.2
+  - name: hrSystemInitialLoadDevice
+    oid: 1.3.6.1.2.1.25.1.3
+    type: gauge
+    help: The index of the hrDeviceEntry for the device from which this host is configured
+      to load its initial operating system configuration. - 1.3.6.1.2.1.25.1.3
+  - name: hrSystemInitialLoadParameters
+    oid: 1.3.6.1.2.1.25.1.4
+    type: OctetString
+    help: This object contains the parameters (e.g - 1.3.6.1.2.1.25.1.4
+  - name: hrSystemNumUsers
+    oid: 1.3.6.1.2.1.25.1.5
+    type: gauge
+    help: The number of user sessions for which this host is storing state information
+      - 1.3.6.1.2.1.25.1.5
+  - name: hrSystemProcesses
+    oid: 1.3.6.1.2.1.25.1.6
+    type: gauge
+    help: The number of process contexts currently loaded or running on this system.
+      - 1.3.6.1.2.1.25.1.6
+  - name: hrSystemMaxProcesses
+    oid: 1.3.6.1.2.1.25.1.7
+    type: gauge
+    help: The maximum number of process contexts this system can support - 1.3.6.1.2.1.25.1.7
+  - name: hrMemorySize
+    oid: 1.3.6.1.2.1.25.2.2
+    type: gauge
+    help: The amount of physical main memory contained by the host. - 1.3.6.1.2.1.25.2.2
+  - name: hrStorageIndex
+    oid: 1.3.6.1.2.1.25.2.3.1.1
+    type: gauge
+    help: A unique value for each logical storage area contained by the host. - 1.3.6.1.2.1.25.2.3.1.1
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+  - name: hrStorageDescr
+    oid: 1.3.6.1.2.1.25.2.3.1.3
+    type: DisplayString
+    help: A description of the type and instance of the storage described by this
+      entry. - 1.3.6.1.2.1.25.2.3.1.3
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+  - name: hrStorageAllocationUnits
+    oid: 1.3.6.1.2.1.25.2.3.1.4
+    type: gauge
+    help: The size, in bytes, of the data objects allocated from this pool - 1.3.6.1.2.1.25.2.3.1.4
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+  - name: hrStorageSize
+    oid: 1.3.6.1.2.1.25.2.3.1.5
+    type: gauge
+    help: The size of the storage represented by this entry, in units of hrStorageAllocationUnits.
+      - 1.3.6.1.2.1.25.2.3.1.5
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+  - name: hrStorageUsed
+    oid: 1.3.6.1.2.1.25.2.3.1.6
+    type: gauge
+    help: The amount of the storage represented by this entry that is allocated, in
+      units of hrStorageAllocationUnits. - 1.3.6.1.2.1.25.2.3.1.6
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+  - name: hrStorageAllocationFailures
+    oid: 1.3.6.1.2.1.25.2.3.1.7
+    type: counter
+    help: The number of requests for storage represented by this entry that could
+      not be honored due to not enough storage - 1.3.6.1.2.1.25.2.3.1.7
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+  - name: hrDeviceIndex
+    oid: 1.3.6.1.2.1.25.3.2.1.1
+    type: gauge
+    help: A unique value for each device contained by the host - 1.3.6.1.2.1.25.3.2.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrDeviceDescr
+    oid: 1.3.6.1.2.1.25.3.2.1.3
+    type: DisplayString
+    help: A textual description of this device, including the device's manufacturer
+      and revision, and optionally, its serial number. - 1.3.6.1.2.1.25.3.2.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrDeviceStatus
+    oid: 1.3.6.1.2.1.25.3.2.1.5
+    type: gauge
+    help: The current operational state of the device described by this row of the
+      table - 1.3.6.1.2.1.25.3.2.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      1: unknown
+      2: running
+      3: warning
+      4: testing
+      5: down
+  - name: hrDeviceErrors
+    oid: 1.3.6.1.2.1.25.3.2.1.6
+    type: counter
+    help: The number of errors detected on this device - 1.3.6.1.2.1.25.3.2.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrProcessorLoad
+    oid: 1.3.6.1.2.1.25.3.3.1.2
+    type: gauge
+    help: The average, over the last minute, of the percentage of time that this processor
+      was not idle. - 1.3.6.1.2.1.25.3.3.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrNetworkIfIndex
+    oid: 1.3.6.1.2.1.25.3.4.1.1
+    type: gauge
+    help: The value of ifIndex which corresponds to this network device. - 1.3.6.1.2.1.25.3.4.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrPrinterStatus
+    oid: 1.3.6.1.2.1.25.3.5.1.1
+    type: gauge
+    help: The current status of this printer device - 1.3.6.1.2.1.25.3.5.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: idle
+      4: printing
+      5: warmup
+  - name: hrPrinterDetectedErrorState
+    oid: 1.3.6.1.2.1.25.3.5.1.2
+    type: OctetString
+    help: This object represents any error conditions detected by the printer - 1.3.6.1.2.1.25.3.5.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrDiskStorageAccess
+    oid: 1.3.6.1.2.1.25.3.6.1.1
+    type: gauge
+    help: An indication if this long-term storage device is readable and writable
+      or only readable - 1.3.6.1.2.1.25.3.6.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      1: readWrite
+      2: readOnly
+  - name: hrDiskStorageMedia
+    oid: 1.3.6.1.2.1.25.3.6.1.2
+    type: gauge
+    help: An indication of the type of media used in this long-term storage device.
+      - 1.3.6.1.2.1.25.3.6.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: hardDisk
+      4: floppyDisk
+      5: opticalDiskROM
+      6: opticalDiskWORM
+      7: opticalDiskRW
+      8: ramDisk
+  - name: hrDiskStorageRemoveble
+    oid: 1.3.6.1.2.1.25.3.6.1.3
+    type: gauge
+    help: Denotes whether or not the disk media may be removed from the drive. - 1.3.6.1.2.1.25.3.6.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: hrDiskStorageCapacity
+    oid: 1.3.6.1.2.1.25.3.6.1.4
+    type: gauge
+    help: The total size for this long-term storage device. - 1.3.6.1.2.1.25.3.6.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: hrPartitionIndex
+    oid: 1.3.6.1.2.1.25.3.7.1.1
+    type: gauge
+    help: A unique value for each partition on this long- term storage device - 1.3.6.1.2.1.25.3.7.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: hrPartitionIndex
+      type: gauge
+  - name: hrPartitionLabel
+    oid: 1.3.6.1.2.1.25.3.7.1.2
+    type: OctetString
+    help: A textual description of this partition. - 1.3.6.1.2.1.25.3.7.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: hrPartitionIndex
+      type: gauge
+  - name: hrPartitionID
+    oid: 1.3.6.1.2.1.25.3.7.1.3
+    type: OctetString
+    help: A descriptor which uniquely represents this partition to the responsible
+      operating system - 1.3.6.1.2.1.25.3.7.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: hrPartitionIndex
+      type: gauge
+  - name: hrPartitionSize
+    oid: 1.3.6.1.2.1.25.3.7.1.4
+    type: gauge
+    help: The size of this partition. - 1.3.6.1.2.1.25.3.7.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: hrPartitionIndex
+      type: gauge
+  - name: hrPartitionFSIndex
+    oid: 1.3.6.1.2.1.25.3.7.1.5
+    type: gauge
+    help: The index of the file system mounted on this partition - 1.3.6.1.2.1.25.3.7.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: hrPartitionIndex
+      type: gauge
+  - name: hrFSIndex
+    oid: 1.3.6.1.2.1.25.3.8.1.1
+    type: gauge
+    help: A unique value for each file system local to this host - 1.3.6.1.2.1.25.3.8.1.1
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+  - name: hrFSMountPoint
+    oid: 1.3.6.1.2.1.25.3.8.1.2
+    type: OctetString
+    help: The path name of the root of this file system. - 1.3.6.1.2.1.25.3.8.1.2
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+  - name: hrFSRemoteMountPoint
+    oid: 1.3.6.1.2.1.25.3.8.1.3
+    type: OctetString
+    help: A description of the name and/or address of the server that this file system
+      is mounted from - 1.3.6.1.2.1.25.3.8.1.3
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+  - name: hrFSAccess
+    oid: 1.3.6.1.2.1.25.3.8.1.5
+    type: gauge
+    help: An indication if this file system is logically configured by the operating
+      system to be readable and writable or only readable - 1.3.6.1.2.1.25.3.8.1.5
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+    enum_values:
+      1: readWrite
+      2: readOnly
+  - name: hrFSBootable
+    oid: 1.3.6.1.2.1.25.3.8.1.6
+    type: gauge
+    help: A flag indicating whether this file system is bootable. - 1.3.6.1.2.1.25.3.8.1.6
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: hrFSStorageIndex
+    oid: 1.3.6.1.2.1.25.3.8.1.7
+    type: gauge
+    help: The index of the hrStorageEntry that represents information about this file
+      system - 1.3.6.1.2.1.25.3.8.1.7
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+  - name: hrFSLastFullBackupDate
+    oid: 1.3.6.1.2.1.25.3.8.1.8
+    type: DateAndTime
+    help: The last date at which this complete file system was copied to another storage
+      device for backup - 1.3.6.1.2.1.25.3.8.1.8
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+  - name: hrFSLastPartialBackupDate
+    oid: 1.3.6.1.2.1.25.3.8.1.9
+    type: DateAndTime
+    help: The last date at which a portion of this file system was copied to another
+      storage device for backup - 1.3.6.1.2.1.25.3.8.1.9
+    indexes:
+    - labelname: hrFSIndex
+      type: gauge
+  - name: hrSWOSIndex
+    oid: 1.3.6.1.2.1.25.4.1
+    type: gauge
+    help: The value of the hrSWRunIndex for the hrSWRunEntry that represents the primary
+      operating system running on this host - 1.3.6.1.2.1.25.4.1
+  - name: hrSWRunIndex
+    oid: 1.3.6.1.2.1.25.4.2.1.1
+    type: gauge
+    help: A unique value for each piece of software running on the host - 1.3.6.1.2.1.25.4.2.1.1
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+  - name: hrSWRunName
+    oid: 1.3.6.1.2.1.25.4.2.1.2
+    type: OctetString
+    help: A textual description of this running piece of software, including the manufacturer,
+      revision, and the name by which it is commonly known - 1.3.6.1.2.1.25.4.2.1.2
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+  - name: hrSWRunPath
+    oid: 1.3.6.1.2.1.25.4.2.1.4
+    type: OctetString
+    help: A description of the location on long-term storage (e.g - 1.3.6.1.2.1.25.4.2.1.4
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+  - name: hrSWRunParameters
+    oid: 1.3.6.1.2.1.25.4.2.1.5
+    type: OctetString
+    help: A description of the parameters supplied to this software when it was initially
+      loaded. - 1.3.6.1.2.1.25.4.2.1.5
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+  - name: hrSWRunType
+    oid: 1.3.6.1.2.1.25.4.2.1.6
+    type: gauge
+    help: The type of this software. - 1.3.6.1.2.1.25.4.2.1.6
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+    enum_values:
+      1: unknown
+      2: operatingSystem
+      3: deviceDriver
+      4: application
+  - name: hrSWRunStatus
+    oid: 1.3.6.1.2.1.25.4.2.1.7
+    type: gauge
+    help: The status of this running piece of software - 1.3.6.1.2.1.25.4.2.1.7
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+    enum_values:
+      1: running
+      2: runnable
+      3: notRunnable
+      4: invalid
+  - name: hrSWRunPerfCPU
+    oid: 1.3.6.1.2.1.25.5.1.1.1
+    type: gauge
+    help: The number of centi-seconds of the total system's CPU resources consumed
+      by this process - 1.3.6.1.2.1.25.5.1.1.1
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+  - name: hrSWRunPerfMem
+    oid: 1.3.6.1.2.1.25.5.1.1.2
+    type: gauge
+    help: The total amount of real system memory allocated to this process. - 1.3.6.1.2.1.25.5.1.1.2
+    indexes:
+    - labelname: hrSWRunIndex
+      type: gauge
+  - name: hrSWInstalledLastChange
+    oid: 1.3.6.1.2.1.25.6.1
+    type: gauge
+    help: The value of sysUpTime when an entry in the hrSWInstalledTable was last
+      added, renamed, or deleted - 1.3.6.1.2.1.25.6.1
+  - name: hrSWInstalledLastUpdateTime
+    oid: 1.3.6.1.2.1.25.6.2
+    type: gauge
+    help: The value of sysUpTime when the hrSWInstalledTable was last completely updated
+      - 1.3.6.1.2.1.25.6.2
+  - name: hrSWInstalledIndex
+    oid: 1.3.6.1.2.1.25.6.3.1.1
+    type: gauge
+    help: A unique value for each piece of software installed on the host - 1.3.6.1.2.1.25.6.3.1.1
+    indexes:
+    - labelname: hrSWInstalledIndex
+      type: gauge
+  - name: hrSWInstalledName
+    oid: 1.3.6.1.2.1.25.6.3.1.2
+    type: OctetString
+    help: A textual description of this installed piece of software, including the
+      manufacturer, revision, the name by which it is commonly known, and optionally,
+      its serial number. - 1.3.6.1.2.1.25.6.3.1.2
+    indexes:
+    - labelname: hrSWInstalledIndex
+      type: gauge
+  - name: hrSWInstalledType
+    oid: 1.3.6.1.2.1.25.6.3.1.4
+    type: gauge
+    help: The type of this software. - 1.3.6.1.2.1.25.6.3.1.4
+    indexes:
+    - labelname: hrSWInstalledIndex
+      type: gauge
+    enum_values:
+      1: unknown
+      2: operatingSystem
+      3: deviceDriver
+      4: application
+  - name: hrSWInstalledDate
+    oid: 1.3.6.1.2.1.25.6.3.1.5
+    type: DateAndTime
+    help: The last-modification date of this application as it would appear in a directory
+      listing. - 1.3.6.1.2.1.25.6.3.1.5
+    indexes:
+    - labelname: hrSWInstalledIndex
+      type: gauge
+  - name: prtGeneralConfigChanges
+    oid: 1.3.6.1.2.1.43.5.1.1.1
+    type: counter
+    help: Counts configuration changes that change the capabilities of a printer,
+      such as the addition/deletion of input/output bins, the addition/deletion of
+      interpreters, or changes in media size - 1.3.6.1.2.1.43.5.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtGeneralCurrentLocalization
+    oid: 1.3.6.1.2.1.43.5.1.1.2
+    type: gauge
+    help: The value of the prtLocalizationIndex corresponding to the current language,
+      country, and character set to be used for localized string values that are identified
+      as being dependent on the value of this object - 1.3.6.1.2.1.43.5.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtGeneralReset
+    oid: 1.3.6.1.2.1.43.5.1.1.3
+    type: gauge
+    help: Setting this value to `powerCycleReset', `resetToNVRAM', or `resetToFactoryDefaults'
+      will result in the resetting of the printer - 1.3.6.1.2.1.43.5.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      3: notResetting
+      4: powerCycleReset
+      5: resetToNVRAM
+      6: resetToFactoryDefaults
+  - name: prtGeneralCurrentOperator
+    oid: 1.3.6.1.2.1.43.5.1.1.4
+    type: OctetString
+    help: The name of the current human operator responsible for operating this printer
+      - 1.3.6.1.2.1.43.5.1.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtGeneralServicePerson
+    oid: 1.3.6.1.2.1.43.5.1.1.5
+    type: OctetString
+    help: The name of the last human responsible for servicing this printer - 1.3.6.1.2.1.43.5.1.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtInputDefaultIndex
+    oid: 1.3.6.1.2.1.43.5.1.1.6
+    type: gauge
+    help: 'The value of prtInputIndex corresponding to the default input sub-unit:
+      that is, this object selects the default source of input media. - 1.3.6.1.2.1.43.5.1.1.6'
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtOutputDefaultIndex
+    oid: 1.3.6.1.2.1.43.5.1.1.7
+    type: gauge
+    help: The value of prtOutputIndex corresponding to the default output sub-unit;
+      that is, this object selects the default output destination. - 1.3.6.1.2.1.43.5.1.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtMarkerDefaultIndex
+    oid: 1.3.6.1.2.1.43.5.1.1.8
+    type: gauge
+    help: The value of prtMarkerIndex corresponding to the default markersub-unit;
+      that is, this object selects the default marker. - 1.3.6.1.2.1.43.5.1.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtMediaPathDefaultIndex
+    oid: 1.3.6.1.2.1.43.5.1.1.9
+    type: gauge
+    help: The value of prtMediaPathIndex corresponding to the default media path;
+      that is, the selection of the default media path. - 1.3.6.1.2.1.43.5.1.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtConsoleLocalization
+    oid: 1.3.6.1.2.1.43.5.1.1.10
+    type: gauge
+    help: The value of the prtLocalizationIndex corresponding to the language, country,
+      and character set to be used for the console - 1.3.6.1.2.1.43.5.1.1.10
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtConsoleNumberOfDisplayLines
+    oid: 1.3.6.1.2.1.43.5.1.1.11
+    type: gauge
+    help: The number of lines on the printer's physical display - 1.3.6.1.2.1.43.5.1.1.11
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtConsoleNumberOfDisplayChars
+    oid: 1.3.6.1.2.1.43.5.1.1.12
+    type: gauge
+    help: The number of characters per line displayed on the physical display - 1.3.6.1.2.1.43.5.1.1.12
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+  - name: prtConsoleDisable
+    oid: 1.3.6.1.2.1.43.5.1.1.13
+    type: gauge
+    help: This object enables or disables manual input from the operators console.
+      - 1.3.6.1.2.1.43.5.1.1.13
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    enum_values:
+      3: enabled
+      4: disabled
+  - name: prtStorageRefSeqNumber
+    oid: 1.3.6.1.2.1.43.5.2.1.1
+    type: gauge
+    help: This value will be unique amongst all entries with a common value of hrStorageIndex
+      - 1.3.6.1.2.1.43.5.2.1.1
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+    - labelname: prtStorageRefSeqNumber
+      type: gauge
+  - name: prtStorageRefIndex
+    oid: 1.3.6.1.2.1.43.5.2.1.2
+    type: gauge
+    help: The value of the hrDeviceIndex of the printer device that this storageEntry
+      is associated with. - 1.3.6.1.2.1.43.5.2.1.2
+    indexes:
+    - labelname: hrStorageIndex
+      type: gauge
+    - labelname: prtStorageRefSeqNumber
+      type: gauge
+  - name: prtDeviceRefSeqNumber
+    oid: 1.3.6.1.2.1.43.5.3.1.1
+    type: gauge
+    help: This value will be unique amongst all entries with a common value of hrDeviceIndex
+      - 1.3.6.1.2.1.43.5.3.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtDeviceRefSeqNumber
+      type: gauge
+  - name: prtDeviceRefIndex
+    oid: 1.3.6.1.2.1.43.5.3.1.2
+    type: gauge
+    help: The value of the hrDeviceIndex of the printer device that this deviceEntry
+      is associated with. - 1.3.6.1.2.1.43.5.3.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtDeviceRefSeqNumber
+      type: gauge
+  - name: prtCoverIndex
+    oid: 1.3.6.1.2.1.43.6.1.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this Cover sub-unit - 1.3.6.1.2.1.43.6.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtCoverIndex
+      type: gauge
+  - name: prtCoverDescription
+    oid: 1.3.6.1.2.1.43.6.1.1.2
+    type: OctetString
+    help: The manufacturer provided cover sub-mechanism name in the localization specified
+      by prtGeneralCurrentLocalization. - 1.3.6.1.2.1.43.6.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtCoverIndex
+      type: gauge
+  - name: prtCoverStatus
+    oid: 1.3.6.1.2.1.43.6.1.1.3
+    type: gauge
+    help: The status of this cover sub-unit. - 1.3.6.1.2.1.43.6.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtCoverIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: doorOpen
+      4: doorClosed
+      5: interlockOpen
+      6: interlockClosed
+  - name: prtLocalizationIndex
+    oid: 1.3.6.1.2.1.43.7.1.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this localization entry -
+      1.3.6.1.2.1.43.7.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtLocalizationIndex
+      type: gauge
+  - name: prtLocalizationLanguage
+    oid: 1.3.6.1.2.1.43.7.1.1.2
+    type: OctetString
+    help: A two character language code from ISO 639 - 1.3.6.1.2.1.43.7.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtLocalizationIndex
+      type: gauge
+  - name: prtLocalizationCountry
+    oid: 1.3.6.1.2.1.43.7.1.1.3
+    type: OctetString
+    help: A two character country code from ISO 3166, a blank string (two space characters)
+      shall indicate that the country is not defined - 1.3.6.1.2.1.43.7.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtLocalizationIndex
+      type: gauge
+  - name: prtLocalizationCharacterSet
+    oid: 1.3.6.1.2.1.43.7.1.1.4
+    type: gauge
+    help: The coded character set used for this localization. - 1.3.6.1.2.1.43.7.1.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtLocalizationIndex
+      type: gauge
+    enum_values:
+      1: other
+  - name: prtInputIndex
+    oid: 1.3.6.1.2.1.43.8.2.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this input sub-unit - 1.3.6.1.2.1.43.8.2.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputType
+    oid: 1.3.6.1.2.1.43.8.2.1.2
+    type: gauge
+    help: The type of technology (discriminated primarily according to feeder mechanism
+      type) employed by the input sub-unit - 1.3.6.1.2.1.43.8.2.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: sheetFeedAutoRemovableTray
+      4: sheetFeedAutoNonRemovableTray
+      5: sheetFeedManual
+      6: continuousRoll
+      7: continuousFanFold
+  - name: prtInputDimUnit
+    oid: 1.3.6.1.2.1.43.8.2.1.3
+    type: gauge
+    help: The unit of measurement for use calculating and relaying dimensional values
+      for this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+  - name: prtInputMediaDimFeedDirDeclared
+    oid: 1.3.6.1.2.1.43.8.2.1.4
+    type: gauge
+    help: This object provides the value of the declared dimension, in the feed direction,
+      of the media that is (or, if empty, was or will be) in this input sub-unit -
+      1.3.6.1.2.1.43.8.2.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaDimXFeedDirDeclared
+    oid: 1.3.6.1.2.1.43.8.2.1.5
+    type: gauge
+    help: This object provides the value of the declared dimension, in the cross feed
+      direction, of the media that is (or, if empty, was or will be) in this input
+      sub-unit - 1.3.6.1.2.1.43.8.2.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaDimFeedDirChosen
+    oid: 1.3.6.1.2.1.43.8.2.1.6
+    type: gauge
+    help: The printer will act as if media of the chosen dimension (in the feed direction)
+      is present in this input source - 1.3.6.1.2.1.43.8.2.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaDimXFeedDirChosen
+    oid: 1.3.6.1.2.1.43.8.2.1.7
+    type: gauge
+    help: The printer will act as if media of the chosen dimension (in the cross feed
+      direction) is present in this input source - 1.3.6.1.2.1.43.8.2.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputCapacityUnit
+    oid: 1.3.6.1.2.1.43.8.2.1.8
+    type: gauge
+    help: The unit of measurement for use in calculating and relaying capacity values
+      for this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+      8: sheets
+      16: feet
+      17: meters
+  - name: prtInputMaxCapacity
+    oid: 1.3.6.1.2.1.43.8.2.1.9
+    type: gauge
+    help: The maximum capacity of the input sub-unit in input sub-unit capacity units
+      (CapacityUnit) - 1.3.6.1.2.1.43.8.2.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputCurrentLevel
+    oid: 1.3.6.1.2.1.43.8.2.1.10
+    type: gauge
+    help: The current capacity of the input sub-unit in input sub-unit capacity units
+      (CapacityUnit) - 1.3.6.1.2.1.43.8.2.1.10
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputStatus
+    oid: 1.3.6.1.2.1.43.8.2.1.11
+    type: gauge
+    help: The current status of this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.11
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaName
+    oid: 1.3.6.1.2.1.43.8.2.1.12
+    type: OctetString
+    help: A description of the media contained in this input sub-unit; This description
+      is intended for display to a human operator - 1.3.6.1.2.1.43.8.2.1.12
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputName
+    oid: 1.3.6.1.2.1.43.8.2.1.13
+    type: OctetString
+    help: The name assigned to this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.13
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputVendorName
+    oid: 1.3.6.1.2.1.43.8.2.1.14
+    type: OctetString
+    help: The vendor name of this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.14
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputModel
+    oid: 1.3.6.1.2.1.43.8.2.1.15
+    type: OctetString
+    help: The model name of this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.15
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputVersion
+    oid: 1.3.6.1.2.1.43.8.2.1.16
+    type: OctetString
+    help: The version of this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.16
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputSerialNumber
+    oid: 1.3.6.1.2.1.43.8.2.1.17
+    type: OctetString
+    help: The serial number assigned to this input sub-unit. - 1.3.6.1.2.1.43.8.2.1.17
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputDescription
+    oid: 1.3.6.1.2.1.43.8.2.1.18
+    type: OctetString
+    help: A free-form text description of this input sub-unit in the localization
+      specified by prtGeneralCurrentLocalization. - 1.3.6.1.2.1.43.8.2.1.18
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputSecurity
+    oid: 1.3.6.1.2.1.43.8.2.1.19
+    type: gauge
+    help: Indicates if this input sub-unit has some security associated with it. -
+      1.3.6.1.2.1.43.8.2.1.19
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: "on"
+      4: "off"
+      5: notPresent
+  - name: prtInputMediaWeight
+    oid: 1.3.6.1.2.1.43.8.2.1.20
+    type: gauge
+    help: The weight of the medium associated with this input sub-unit in grams /
+      per meter squared - 1.3.6.1.2.1.43.8.2.1.20
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaType
+    oid: 1.3.6.1.2.1.43.8.2.1.21
+    type: OctetString
+    help: The name of the type of medium associated with this input sub-unit - 1.3.6.1.2.1.43.8.2.1.21
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaColor
+    oid: 1.3.6.1.2.1.43.8.2.1.22
+    type: OctetString
+    help: 'The name of the color of the medium associated with this input sub-unit
+      using standardized string values from ISO 10175 (DPA) and ISO 10180 (SPDL) which
+      are: other unknown white pink yellow buff goldenrod blue green transparent Implementors
+      may add additional string values - 1.3.6.1.2.1.43.8.2.1.22'
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtInputMediaFormParts
+    oid: 1.3.6.1.2.1.43.8.2.1.23
+    type: gauge
+    help: The number of parts associated with the medium associated with this input
+      sub-unit if the medium is a multi-part form - 1.3.6.1.2.1.43.8.2.1.23
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInputIndex
+      type: gauge
+  - name: prtOutputIndex
+    oid: 1.3.6.1.2.1.43.9.2.1.1
+    type: gauge
+    help: A unique value used by this printer to identify this output sub-unit - 1.3.6.1.2.1.43.9.2.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputType
+    oid: 1.3.6.1.2.1.43.9.2.1.2
+    type: gauge
+    help: The type of technology supported by this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: removableBin
+      4: unRemovableBin
+      5: continuousRollDevice
+      6: mailBox
+      7: continuousFanFold
+  - name: prtOutputCapacityUnit
+    oid: 1.3.6.1.2.1.43.9.2.1.3
+    type: gauge
+    help: The unit of measurement for use in calculating and relaying capacity values
+      for this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+      8: sheets
+      16: feet
+      17: meters
+  - name: prtOutputMaxCapacity
+    oid: 1.3.6.1.2.1.43.9.2.1.4
+    type: gauge
+    help: The maximum capacity of this output sub-unit in output sub-unit capacity
+      units (CapacityUnit) - 1.3.6.1.2.1.43.9.2.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputRemainingCapacity
+    oid: 1.3.6.1.2.1.43.9.2.1.5
+    type: gauge
+    help: The remaining capacity of the possible output sub-unit capacity in output
+      sub-unit capacity units (CapacityUnit) of this output sub-unit - 1.3.6.1.2.1.43.9.2.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputStatus
+    oid: 1.3.6.1.2.1.43.9.2.1.6
+    type: gauge
+    help: The current status of this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputName
+    oid: 1.3.6.1.2.1.43.9.2.1.7
+    type: OctetString
+    help: The name assigned to this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputVendorName
+    oid: 1.3.6.1.2.1.43.9.2.1.8
+    type: OctetString
+    help: The vendor name of this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputModel
+    oid: 1.3.6.1.2.1.43.9.2.1.9
+    type: OctetString
+    help: The name assigned to this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputVersion
+    oid: 1.3.6.1.2.1.43.9.2.1.10
+    type: OctetString
+    help: The version of this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.10
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputSerialNumber
+    oid: 1.3.6.1.2.1.43.9.2.1.11
+    type: OctetString
+    help: The serial number assigned to this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.11
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputDescription
+    oid: 1.3.6.1.2.1.43.9.2.1.12
+    type: OctetString
+    help: A free-form text description of this output sub-unit in the localization
+      specified by prtGeneralCurrentLocalization. - 1.3.6.1.2.1.43.9.2.1.12
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputSecurity
+    oid: 1.3.6.1.2.1.43.9.2.1.13
+    type: gauge
+    help: Indicates if this output sub-unit has some security associated with it and
+      if that security is enabled or not. - 1.3.6.1.2.1.43.9.2.1.13
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: "on"
+      4: "off"
+      5: notPresent
+  - name: prtOutputDimUnit
+    oid: 1.3.6.1.2.1.43.9.2.1.14
+    type: gauge
+    help: The unit of measurement for use in calculating and relaying dimensional
+      values for this output sub-unit. - 1.3.6.1.2.1.43.9.2.1.14
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+  - name: prtOutputMaxDimFeedDir
+    oid: 1.3.6.1.2.1.43.9.2.1.15
+    type: gauge
+    help: The maximum dimensions supported by this output sub-unit for measurements
+      taken parallel relative to the feed direction associated with that sub-unit
+      in output sub-unit dimensional units (DimUnit) - 1.3.6.1.2.1.43.9.2.1.15
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputMaxDimXFeedDir
+    oid: 1.3.6.1.2.1.43.9.2.1.16
+    type: gauge
+    help: The maximum dimensions supported by this output sub-unit for measurements
+      taken ninety degrees relative to the feed direction associated with that sub-unit
+      in output sub-unit dimensional units (DimUnit) - 1.3.6.1.2.1.43.9.2.1.16
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputMinDimFeedDir
+    oid: 1.3.6.1.2.1.43.9.2.1.17
+    type: gauge
+    help: The minimum dimensions supported by this output sub-unit for measurements
+      taken parallel relative to the feed direction associated with that sub-unit
+      in output sub-unit dimensional units (DimUnit) - 1.3.6.1.2.1.43.9.2.1.17
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputMinDimXFeedDir
+    oid: 1.3.6.1.2.1.43.9.2.1.18
+    type: gauge
+    help: The minimum dimensions supported by this output sub-unit for measurements
+      taken ninety degrees relative to the feed direction associated with that sub-unit
+      in output sub-unit dimensional units (DimUnit) - 1.3.6.1.2.1.43.9.2.1.18
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+  - name: prtOutputStackingOrder
+    oid: 1.3.6.1.2.1.43.9.2.1.19
+    type: gauge
+    help: The current state of the stacking order for the associated output sub-unit
+      - 1.3.6.1.2.1.43.9.2.1.19
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      2: unknown
+      3: firstToLast
+      4: lastToFirst
+  - name: prtOutputPageDeliveryOrientation
+    oid: 1.3.6.1.2.1.43.9.2.1.20
+    type: gauge
+    help: The reading surface that will be `up' when pages are delivered to the associated
+      output sub-unit - 1.3.6.1.2.1.43.9.2.1.20
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      3: faceUp
+      4: faceDown
+  - name: prtOutputBursting
+    oid: 1.3.6.1.2.1.43.9.2.1.21
+    type: gauge
+    help: This object indicates that the outputing sub-unit supports bursting, and
+      if so, whether the feature is enabled - 1.3.6.1.2.1.43.9.2.1.21
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: "on"
+      4: "off"
+      5: notPresent
+  - name: prtOutputDecollating
+    oid: 1.3.6.1.2.1.43.9.2.1.22
+    type: gauge
+    help: This object indicates that the output supports supports decollating, and
+      if so, whether the feature is enabled - 1.3.6.1.2.1.43.9.2.1.22
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: "on"
+      4: "off"
+      5: notPresent
+  - name: prtOutputPageCollated
+    oid: 1.3.6.1.2.1.43.9.2.1.23
+    type: gauge
+    help: This object indicates that the output sub-unit supports page collation,
+      and if so, whether the feature is enabled. - 1.3.6.1.2.1.43.9.2.1.23
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: "on"
+      4: "off"
+      5: notPresent
+  - name: prtOutputOffsetStacking
+    oid: 1.3.6.1.2.1.43.9.2.1.24
+    type: gauge
+    help: This object indicates that the output supports supports offset stacking,
+      and if so, whether the feature is enabled. - 1.3.6.1.2.1.43.9.2.1.24
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtOutputIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: "on"
+      4: "off"
+      5: notPresent
+  - name: prtMarkerIndex
+    oid: 1.3.6.1.2.1.43.10.2.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this marking SubUnitStatus
+      - 1.3.6.1.2.1.43.10.2.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerMarkTech
+    oid: 1.3.6.1.2.1.43.10.2.1.2
+    type: gauge
+    help: The type of marking technology used for this marking sub-unit. - 1.3.6.1.2.1.43.10.2.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: electrophotographicLED
+      4: electrophotographicLaser
+      5: electrophotographicOther
+      6: impactMovingHeadDotMatrix9pin
+      7: impactMovingHeadDotMatrix24pin
+      8: impactMovingHeadDotMatrixOther
+      9: impactMovingHeadFullyFormed
+      10: impactBand
+      11: impactOther
+      12: inkjetAqueous
+      13: inkjetSolid
+      14: inkjetOther
+      15: pen
+      16: thermalTransfer
+      17: thermalSensitive
+      18: thermalDiffusion
+      19: thermalOther
+      20: electroerosion
+      21: electrostatic
+      22: photographicMicrofiche
+      23: photographicImagesetter
+      24: photographicOther
+      25: ionDeposition
+      26: eBeam
+      27: typesetter
+  - name: prtMarkerCounterUnit
+    oid: 1.3.6.1.2.1.43.10.2.1.3
+    type: gauge
+    help: The unit that will be used by the printer when reporting counter values
+      for this marking sub-unit - 1.3.6.1.2.1.43.10.2.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+      5: characters
+      6: lines
+      7: impressions
+      8: sheets
+      9: dotRow
+      11: hours
+      16: feet
+      17: meters
+  - name: prtMarkerLifeCount
+    oid: 1.3.6.1.2.1.43.10.2.1.4
+    type: counter
+    help: The count of the number of units of measure counted during the life of printer
+      using units of measure as specified by CounterUnit. - 1.3.6.1.2.1.43.10.2.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerPowerOnCount
+    oid: 1.3.6.1.2.1.43.10.2.1.5
+    type: counter
+    help: The count of the number of units of measure counted since the equipment
+      was most recently powered on using units of measure as specified by CounterUnit.
+      - 1.3.6.1.2.1.43.10.2.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerProcessColorants
+    oid: 1.3.6.1.2.1.43.10.2.1.6
+    type: gauge
+    help: The number of process colors supported by this marker - 1.3.6.1.2.1.43.10.2.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerSpotColorants
+    oid: 1.3.6.1.2.1.43.10.2.1.7
+    type: gauge
+    help: The number of spot colors supported by this marker - 1.3.6.1.2.1.43.10.2.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerAddressabilityUnit
+    oid: 1.3.6.1.2.1.43.10.2.1.8
+    type: gauge
+    help: The unit of measure of distances. - 1.3.6.1.2.1.43.10.2.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+  - name: prtMarkerAddressabilityFeedDir
+    oid: 1.3.6.1.2.1.43.10.2.1.9
+    type: gauge
+    help: The number of addressable marking positions in the feed direction per 10000
+      units of measure specified by AddressabilityUnit - 1.3.6.1.2.1.43.10.2.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerAddressabilityXFeedDir
+    oid: 1.3.6.1.2.1.43.10.2.1.10
+    type: gauge
+    help: The number of addressable marking positions in the cross feed direction
+      in 10000 units of measure specified by AddressabilityUnit - 1.3.6.1.2.1.43.10.2.1.10
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerNorthMargin
+    oid: 1.3.6.1.2.1.43.10.2.1.11
+    type: gauge
+    help: The margin, in units identified by AddressabilityUnit, from the leading
+      edge of the medium as the medium flows throught the marking engine with the
+      side to be imaged facing the observer - 1.3.6.1.2.1.43.10.2.1.11
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerSouthMargin
+    oid: 1.3.6.1.2.1.43.10.2.1.12
+    type: gauge
+    help: The margin from the South edge (see NorthMargin) of the medium in units
+      identified by AddressabilityUnit - 1.3.6.1.2.1.43.10.2.1.12
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerWestMargin
+    oid: 1.3.6.1.2.1.43.10.2.1.13
+    type: gauge
+    help: The margin from the West edge (see NorthMargin) of the medium in units identified
+      by AddressabilityUnit - 1.3.6.1.2.1.43.10.2.1.13
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerEastMargin
+    oid: 1.3.6.1.2.1.43.10.2.1.14
+    type: gauge
+    help: The margin from the East edge (see NorthMargin) of the medium in units identified
+      by AddressabilityUnit - 1.3.6.1.2.1.43.10.2.1.14
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerStatus
+    oid: 1.3.6.1.2.1.43.10.2.1.15
+    type: gauge
+    help: The current status of this marker sub-unit. - 1.3.6.1.2.1.43.10.2.1.15
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerIndex
+      type: gauge
+  - name: prtMarkerSuppliesIndex
+    oid: 1.3.6.1.2.1.43.11.1.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this marker supply - 1.3.6.1.2.1.43.11.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+  - name: prtMarkerSuppliesMarkerIndex
+    oid: 1.3.6.1.2.1.43.11.1.1.2
+    type: gauge
+    help: The value of prtMarkerIndex corresponding to the marking sub-unit with which
+      this marker supply sub-unit is associated. - 1.3.6.1.2.1.43.11.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+  - name: prtMarkerSuppliesColorantIndex
+    oid: 1.3.6.1.2.1.43.11.1.1.3
+    type: gauge
+    help: The value of prtMarkerColorantIndex corresponding to the colorant with which
+      this marker supply sub-unit is associated - 1.3.6.1.2.1.43.11.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+  - name: prtMarkerSuppliesClass
+    oid: 1.3.6.1.2.1.43.11.1.1.4
+    type: gauge
+    help: Indicates whether this supply entity represents a supply container that
+      is consumed or a receptacle that is filled. - 1.3.6.1.2.1.43.11.1.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: supplyThatIsConsumed
+      4: receptacleThatIsFilled
+  - name: prtMarkerSuppliesType
+    oid: 1.3.6.1.2.1.43.11.1.1.5
+    type: gauge
+    help: The type of this supply. - 1.3.6.1.2.1.43.11.1.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: toner
+      4: wasteToner
+      5: ink
+      6: inkCartridge
+      7: inkRibbon
+      8: wasteInk
+      9: opc
+      10: developer
+      11: fuserOil
+      12: solidWax
+      13: ribbonWax
+      14: wasteWax
+  - name: prtMarkerSuppliesDescription
+    oid: 1.3.6.1.2.1.43.11.1.1.6
+    type: OctetString
+    help: The description of this supply container/receptacle in the localization
+      specified by prtGeneralCurrentLocalization. - 1.3.6.1.2.1.43.11.1.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+  - name: prtMarkerSuppliesSupplyUnit
+    oid: 1.3.6.1.2.1.43.11.1.1.7
+    type: gauge
+    help: Unit of this marker supply container/receptacle. - 1.3.6.1.2.1.43.11.1.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+      12: thousandthsOfOunces
+      13: tenthsOfGrams
+      14: hundrethsOfFluidOunces
+      15: tenthsOfMilliliters
+  - name: prtMarkerSuppliesMaxCapacity
+    oid: 1.3.6.1.2.1.43.11.1.1.8
+    type: gauge
+    help: The maximum capacity of this supply container/receptacle expressed in SupplyUnit
+      - 1.3.6.1.2.1.43.11.1.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+  - name: prtMarkerSuppliesLevel
+    oid: 1.3.6.1.2.1.43.11.1.1.9
+    type: gauge
+    help: The current level if this supply is a container; the remaining space if
+      this supply is a receptacle - 1.3.6.1.2.1.43.11.1.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerSuppliesIndex
+      type: gauge
+  - name: prtMarkerColorantIndex
+    oid: 1.3.6.1.2.1.43.12.1.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this colorant - 1.3.6.1.2.1.43.12.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerColorantIndex
+      type: gauge
+  - name: prtMarkerColorantMarkerIndex
+    oid: 1.3.6.1.2.1.43.12.1.1.2
+    type: gauge
+    help: The value of prtMarkerIndex corresponding to the marker sub-unit with which
+      this colorant entry is associated. - 1.3.6.1.2.1.43.12.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerColorantIndex
+      type: gauge
+  - name: prtMarkerColorantRole
+    oid: 1.3.6.1.2.1.43.12.1.1.3
+    type: gauge
+    help: The role played by this colorant. - 1.3.6.1.2.1.43.12.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerColorantIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: process
+      4: spot
+  - name: prtMarkerColorantValue
+    oid: 1.3.6.1.2.1.43.12.1.1.4
+    type: OctetString
+    help: 'The name of the color of this The name of the color of this colorant using
+      standardized string names from ISO 10175 (DPA) and ISO 10180 (SPDL) which are:
+      other unknown white red green blue cyan magenta yellow black Implementors may
+      add additional string values - 1.3.6.1.2.1.43.12.1.1.4'
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerColorantIndex
+      type: gauge
+  - name: prtMarkerColorantTonality
+    oid: 1.3.6.1.2.1.43.12.1.1.5
+    type: gauge
+    help: The distinct levels of tonality realizable by a marking sub-unit when using
+      this colorant - 1.3.6.1.2.1.43.12.1.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMarkerColorantIndex
+      type: gauge
+  - name: prtMediaPathIndex
+    oid: 1.3.6.1.2.1.43.13.4.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this media path - 1.3.6.1.2.1.43.13.4.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathMaxSpeedPrintUnit
+    oid: 1.3.6.1.2.1.43.13.4.1.2
+    type: gauge
+    help: The unit of measure used in specifying the speed of all media paths in the
+      printer. - 1.3.6.1.2.1.43.13.4.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInchesPerHour
+      4: micrometersPerHour
+      5: charactersPerHour
+      6: linesPerHour
+      7: impressionsPerHour
+      8: sheetsPerHour
+      9: dotRowPerHour
+      16: feetPerHour
+      17: metersPerHour
+  - name: prtMediaPathMediaSizeUnit
+    oid: 1.3.6.1.2.1.43.13.4.1.3
+    type: gauge
+    help: The units of measure of media size for use in calculating and relaying dimensional
+      values for all media paths in the printer. - 1.3.6.1.2.1.43.13.4.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+    enum_values:
+      3: tenThousandthsOfInches
+      4: micrometers
+  - name: prtMediaPathMaxSpeed
+    oid: 1.3.6.1.2.1.43.13.4.1.4
+    type: gauge
+    help: The maximum printing speed of this media path expressed in prtMediaPathMaxSpeedUnit's
+      - 1.3.6.1.2.1.43.13.4.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathMaxMediaFeedDir
+    oid: 1.3.6.1.2.1.43.13.4.1.5
+    type: gauge
+    help: The maximum physical media size in the feed direction of this media path
+      expressed in units of measure specified by MediaSizeUnit - 1.3.6.1.2.1.43.13.4.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathMaxMediaXFeedDir
+    oid: 1.3.6.1.2.1.43.13.4.1.6
+    type: gauge
+    help: The maximum physical media size across the feed direction of this media
+      path expressed in units of measure specified by MediaSizeUnit - 1.3.6.1.2.1.43.13.4.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathMinMediaFeedDir
+    oid: 1.3.6.1.2.1.43.13.4.1.7
+    type: gauge
+    help: The minimum physical media size in the feed direction of this media path
+      expressed in units of measure specified by MediaSizeUnit - 1.3.6.1.2.1.43.13.4.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathMinMediaXFeedDir
+    oid: 1.3.6.1.2.1.43.13.4.1.8
+    type: gauge
+    help: The minimum physical media size across the feed direction of this media
+      path expressed in units of measure specified by MediaSizeUnit - 1.3.6.1.2.1.43.13.4.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathType
+    oid: 1.3.6.1.2.1.43.13.4.1.9
+    type: gauge
+    help: The type of the media path for this media path. - 1.3.6.1.2.1.43.13.4.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: longEdgeBindingDuplex
+      4: shortEdgeBindingDuplex
+      5: simplex
+  - name: prtMediaPathDescription
+    oid: 1.3.6.1.2.1.43.13.4.1.10
+    type: OctetString
+    help: The manufacturer-provided description of this media path in the localization
+      specified by prtGeneralCurrentLocalization. - 1.3.6.1.2.1.43.13.4.1.10
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtMediaPathStatus
+    oid: 1.3.6.1.2.1.43.13.4.1.11
+    type: gauge
+    help: The current status of this media path. - 1.3.6.1.2.1.43.13.4.1.11
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtMediaPathIndex
+      type: gauge
+  - name: prtChannelIndex
+    oid: 1.3.6.1.2.1.43.14.1.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this data channel - 1.3.6.1.2.1.43.14.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+  - name: prtChannelType
+    oid: 1.3.6.1.2.1.43.14.1.1.2
+    type: gauge
+    help: The type of this print data channel - 1.3.6.1.2.1.43.14.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: chSerialPort
+      4: chParallelPort
+      5: chIEEE1284Port
+      6: chSCSIPort
+      7: chAppleTalkPAP
+      8: chLPDServer
+      9: chNetwareRPrinter
+      10: chNetwarePServer
+      11: chPort9100
+      12: chAppSocket
+      13: chFTP
+      14: chTFTP
+      15: chDLCLLCPort
+      16: chIBM3270
+      17: chIBM5250
+      18: chFax
+      19: chIEEE1394
+      20: chTransport1
+      21: chCPAP
+      22: chDCERemoteProcCall
+      23: chONCRemoteProcCall
+      24: chOLE
+      25: chNamedPipe
+      26: chPCPrint
+      27: chServerMessageBlock
+      28: chDPMF
+      29: chDLLAPI
+      30: chVxDAPI
+      31: chSystemObjectManager
+      32: chDECLAT
+      33: chNPAP
+  - name: prtChannelProtocolVersion
+    oid: 1.3.6.1.2.1.43.14.1.1.3
+    type: OctetString
+    help: The version of the protocol used on this channel - 1.3.6.1.2.1.43.14.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+  - name: prtChannelCurrentJobCntlLangIndex
+    oid: 1.3.6.1.2.1.43.14.1.1.4
+    type: gauge
+    help: The value of prtInterpreterIndex corresponding to the Control Language Interpreter
+      for this channel - 1.3.6.1.2.1.43.14.1.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+  - name: prtChannelDefaultPageDescLangIndex
+    oid: 1.3.6.1.2.1.43.14.1.1.5
+    type: gauge
+    help: The value of prtInterpreterIndex corresponding to the Page Description Language
+      Interpreter for this channel - 1.3.6.1.2.1.43.14.1.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+  - name: prtChannelState
+    oid: 1.3.6.1.2.1.43.14.1.1.6
+    type: gauge
+    help: The state of this print data channel - 1.3.6.1.2.1.43.14.1.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: printDataAccepted
+      4: noDataAccepted
+  - name: prtChannelIfIndex
+    oid: 1.3.6.1.2.1.43.14.1.1.7
+    type: gauge
+    help: The value of ifIndex (in the ifTable; see the interface section of MIB-2/RFC
+      1213) which corresponds to this channel - 1.3.6.1.2.1.43.14.1.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+  - name: prtChannelStatus
+    oid: 1.3.6.1.2.1.43.14.1.1.8
+    type: gauge
+    help: The current status of the channel. - 1.3.6.1.2.1.43.14.1.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtChannelIndex
+      type: gauge
+  - name: prtInterpreterIndex
+    oid: 1.3.6.1.2.1.43.15.1.1.1
+    type: gauge
+    help: A unique value for each PDL or control language for which there exists an
+      interpreter or emulator in the printer - 1.3.6.1.2.1.43.15.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterLangFamily
+    oid: 1.3.6.1.2.1.43.15.1.1.2
+    type: gauge
+    help: The family name of a Page Description Language (PDL) or control language
+      which this interpreter in the printer can interpret or emulate - 1.3.6.1.2.1.43.15.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: langPCL
+      4: langHPGL
+      5: langPJL
+      6: langPS
+      7: langIPDS
+      8: langPPDS
+      9: langEscapeP
+      10: langEpson
+      11: langDDIF
+      12: langInterpress
+      13: langISO6429
+      14: langLineData
+      15: langMODCA
+      16: langREGIS
+      17: langSCS
+      18: langSPDL
+      19: langTEK4014
+      20: langPDS
+      21: langIGP
+      22: langCodeV
+      23: langDSCDSE
+      24: langWPS
+      25: langLN03
+      26: langCCITT
+      27: langQUIC
+      28: langCPAP
+      29: langDecPPL
+      30: langSimpleText
+      31: langNPAP
+      32: langDOC
+      33: langimPress
+      34: langPinwriter
+      35: langNPDL
+      36: langNEC201PL
+      37: langAutomatic
+      38: langPages
+      39: langLIPS
+      40: langTIFF
+      41: langDiagnostic
+      42: langPSPrinter
+      43: langCaPSL
+      44: langEXCL
+      45: langLCDS
+      46: langXES
+  - name: prtInterpreterLangLevel
+    oid: 1.3.6.1.2.1.43.15.1.1.3
+    type: OctetString
+    help: The level of the language which this interpreter is interpreting or emulating
+      - 1.3.6.1.2.1.43.15.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterLangVersion
+    oid: 1.3.6.1.2.1.43.15.1.1.4
+    type: OctetString
+    help: The date code or version of the language which this interpreter is interpreting
+      or emulating. - 1.3.6.1.2.1.43.15.1.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterDescription
+    oid: 1.3.6.1.2.1.43.15.1.1.5
+    type: OctetString
+    help: A string to identify this interpreter in the localization specified by prtGeneralCurrentLocalization
+      as opposed to the language which is being interpreted - 1.3.6.1.2.1.43.15.1.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterVersion
+    oid: 1.3.6.1.2.1.43.15.1.1.6
+    type: OctetString
+    help: The date code, version number, or other product specific information tied
+      to this interpreter - 1.3.6.1.2.1.43.15.1.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterDefaultOrientation
+    oid: 1.3.6.1.2.1.43.15.1.1.7
+    type: gauge
+    help: The current orientation default for this interpreter - 1.3.6.1.2.1.43.15.1.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: portrait
+      4: landscape
+  - name: prtInterpreterFeedAddressability
+    oid: 1.3.6.1.2.1.43.15.1.1.8
+    type: gauge
+    help: The maximum interpreter addressability in the feed direction in 10000 prtMarkerAddressabilityUnit
+      s (see prtMarkerAddressabilityFeedDir ) for this interpreter - 1.3.6.1.2.1.43.15.1.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterXFeedAddressability
+    oid: 1.3.6.1.2.1.43.15.1.1.9
+    type: gauge
+    help: The maximum interpreter addressability in the cross feed direction in 10000
+      prtMarkerAddressabilityUnit s (see prtMarkerAddressabilityXFeedDir) for this
+      interpreter - 1.3.6.1.2.1.43.15.1.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+  - name: prtInterpreterDefaultCharSetIn
+    oid: 1.3.6.1.2.1.43.15.1.1.10
+    type: gauge
+    help: The default coded character set for input octets encountered outside a context
+      in which the Page Description Language established the interpretation of the
+      octets - 1.3.6.1.2.1.43.15.1.1.10
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+    enum_values:
+      1: other
+  - name: prtInterpreterDefaultCharSetOut
+    oid: 1.3.6.1.2.1.43.15.1.1.11
+    type: gauge
+    help: The default character set for data coming from this interpreter through
+      the printer's output channel - 1.3.6.1.2.1.43.15.1.1.11
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+    enum_values:
+      1: other
+  - name: prtInterpreterTwoWay
+    oid: 1.3.6.1.2.1.43.15.1.1.12
+    type: gauge
+    help: Indicates whether or not this interpreter returns information back to the
+      host. - 1.3.6.1.2.1.43.15.1.1.12
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtInterpreterIndex
+      type: gauge
+    enum_values:
+      3: "yes"
+      4: "no"
+  - name: prtConsoleDisplayBufferIndex
+    oid: 1.3.6.1.2.1.43.16.5.1.1
+    type: gauge
+    help: A unique value for each console line in the printer - 1.3.6.1.2.1.43.16.5.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleDisplayBufferIndex
+      type: gauge
+  - name: prtConsoleDisplayBufferText
+    oid: 1.3.6.1.2.1.43.16.5.1.2
+    type: OctetString
+    help: The content of a line in the logical display buffer of the operator's console
+      of the printer - 1.3.6.1.2.1.43.16.5.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleDisplayBufferIndex
+      type: gauge
+  - name: prtConsoleLightIndex
+    oid: 1.3.6.1.2.1.43.17.6.1.1
+    type: gauge
+    help: A unique value used by the printer to identify this light - 1.3.6.1.2.1.43.17.6.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleLightIndex
+      type: gauge
+  - name: prtConsoleOnTime
+    oid: 1.3.6.1.2.1.43.17.6.1.2
+    type: gauge
+    help: The on time in milliseconds of blinking of this light; 0 indicates off always
+      - 1.3.6.1.2.1.43.17.6.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleLightIndex
+      type: gauge
+  - name: prtConsoleOffTime
+    oid: 1.3.6.1.2.1.43.17.6.1.3
+    type: gauge
+    help: The off time in milliseconds of blinking of this light; 0 indicates on always
+      - 1.3.6.1.2.1.43.17.6.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleLightIndex
+      type: gauge
+  - name: prtConsoleColor
+    oid: 1.3.6.1.2.1.43.17.6.1.4
+    type: gauge
+    help: The color of this light. - 1.3.6.1.2.1.43.17.6.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleLightIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: white
+      4: red
+      5: green
+      6: blue
+      7: cyan
+      8: magenta
+      9: yellow
+  - name: prtConsoleDescription
+    oid: 1.3.6.1.2.1.43.17.6.1.5
+    type: OctetString
+    help: The vendor description or label of this light in the localization specified
+      by prtConsoleLocalization. - 1.3.6.1.2.1.43.17.6.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtConsoleLightIndex
+      type: gauge
+  - name: prtAlertIndex
+    oid: 1.3.6.1.2.1.43.18.1.1.1
+    type: gauge
+    help: The index value used to determine which alerts have been added or removed
+      from the alert table - 1.3.6.1.2.1.43.18.1.1.1
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+  - name: prtAlertSeverityLevel
+    oid: 1.3.6.1.2.1.43.18.1.1.2
+    type: gauge
+    help: The level of severity of this alert table entry - 1.3.6.1.2.1.43.18.1.1.2
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: critical
+      4: warning
+  - name: prtAlertTrainingLevel
+    oid: 1.3.6.1.2.1.43.18.1.1.3
+    type: gauge
+    help: The level of training required to handle this alert - 1.3.6.1.2.1.43.18.1.1.3
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: untrained
+      4: trained
+      5: fieldService
+      6: management
+  - name: prtAlertGroup
+    oid: 1.3.6.1.2.1.43.18.1.1.4
+    type: gauge
+    help: The type of sub-unit within the printer model that this alert is related
+      - 1.3.6.1.2.1.43.18.1.1.4
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+    enum_values:
+      1: other
+      3: hostResourcesMIBStorageTable
+      4: hostResourcesMIBDeviceTable
+      5: generalPrinter
+      6: cover
+      7: localization
+      8: input
+      9: output
+      10: marker
+      11: markerSupplies
+      12: markerColorant
+      13: mediaPath
+      14: channel
+      15: interpreter
+      16: consoleDisplayBuffer
+      17: consoleLights
+  - name: prtAlertGroupIndex
+    oid: 1.3.6.1.2.1.43.18.1.1.5
+    type: gauge
+    help: An index of the row within the principle table in the group identified by
+      prtAlertGroup that represents the sub-unit of the printer that caused this alert
+      - 1.3.6.1.2.1.43.18.1.1.5
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+  - name: prtAlertLocation
+    oid: 1.3.6.1.2.1.43.18.1.1.6
+    type: gauge
+    help: The sub-unit location that is defined by the printer manufacturer to further
+      refine the location of this alert within the designated sub-unit - 1.3.6.1.2.1.43.18.1.1.6
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+  - name: prtAlertCode
+    oid: 1.3.6.1.2.1.43.18.1.1.7
+    type: gauge
+    help: The code that describes the type of alert for this entry in the table -
+      1.3.6.1.2.1.43.18.1.1.7
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: unknown
+      3: coverOpen
+      4: coverClosed
+      5: interlockOpen
+      6: interlockClosed
+      7: configurationChange
+      8: jam
+      501: doorOpen
+      502: doorClosed
+      503: powerUp
+      504: powerDown
+      801: inputMediaTrayMissing
+      802: inputMediaSizeChange
+      803: inputMediaWeightChange
+      804: inputMediaTypeChange
+      805: inputMediaColorChange
+      806: inputMediaFormPartsChange
+      807: inputMediaSupplyLow
+      808: inputMediaSupplyEmpty
+      901: outputMediaTrayMissing
+      902: outputMediaTrayAlmostFull
+      903: outputMediaTrayFull
+      1001: markerFuserUnderTemperature
+      1002: markerFuserOverTemperature
+      1101: markerTonerEmpty
+      1102: markerInkEmpty
+      1103: markerPrintRibbonEmpty
+      1104: markerTonerAlmostEmpty
+      1105: markerInkAlmostEmpty
+      1106: markerPrintRibbonAlmostEmpty
+      1107: markerWasteTonerReceptacleAlmostFull
+      1108: markerWasteInkReceptacleAlmostFull
+      1109: markerWasteTonerReceptacleFull
+      1110: markerWasteInkReceptacleFull
+      1111: markerOpcLifeAlmostOver
+      1112: markerOpcLifeOver
+      1113: markerDeveloperAlmostEmpty
+      1114: markerDeveloperEmpty
+      1301: mediaPathMediaTrayMissing
+      1302: mediaPathMediaTrayAlmostFull
+      1303: mediaPathMediaTrayFull
+      1501: interpreterMemoryIncrease
+      1502: interpreterMemoryDecrease
+      1503: interpreterCartridgeAdded
+      1504: interpreterCartridgeDeleted
+      1505: interpreterResourceAdded
+      1506: interpreterResourceDeleted
+      1507: interpreterResourceUnavailable
+  - name: prtAlertDescription
+    oid: 1.3.6.1.2.1.43.18.1.1.8
+    type: OctetString
+    help: A description of this alert entry in the localization specified by prtGeneralCurrentLocalization
+      - 1.3.6.1.2.1.43.18.1.1.8
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+  - name: prtAlertTime
+    oid: 1.3.6.1.2.1.43.18.1.1.9
+    type: gauge
+    help: The value of sysUpTime at the time that this alert was generated. - 1.3.6.1.2.1.43.18.1.1.9
+    indexes:
+    - labelname: hrDeviceIndex
+      type: gauge
+    - labelname: prtAlertIndex
+      type: gauge
+  - name: dot1dBaseBridgeAddress
+    oid: 1.3.6.1.2.1.17.1.1
+    type: OctetString
+    help: The MAC address used by this bridge when it must be referred to in a unique
+      fashion - 1.3.6.1.2.1.17.1.1
+  - name: dot1dBaseNumPorts
+    oid: 1.3.6.1.2.1.17.1.2
+    type: gauge
+    help: The number of ports controlled by this bridging entity. - 1.3.6.1.2.1.17.1.2
+  - name: dot1dBaseType
+    oid: 1.3.6.1.2.1.17.1.3
+    type: gauge
+    help: Indicates what type of bridging this bridge can perform - 1.3.6.1.2.1.17.1.3
+    enum_values:
+      1: unknown
+      2: transparent-only
+      3: sourceroute-only
+      4: srt
+  - name: dot1dBasePort
+    oid: 1.3.6.1.2.1.17.1.4.1.1
+    type: gauge
+    help: The port number of the port for which this entry contains bridge management
+      information. - 1.3.6.1.2.1.17.1.4.1.1
+    indexes:
+    - labelname: dot1dBasePort
+      type: gauge
+  - name: dot1dBasePortIfIndex
+    oid: 1.3.6.1.2.1.17.1.4.1.2
+    type: gauge
+    help: The value of the instance of the ifIndex object, defined in MIB-II, for
+      the interface corresponding to this port. - 1.3.6.1.2.1.17.1.4.1.2
+    indexes:
+    - labelname: dot1dBasePort
+      type: gauge
+  - name: dot1dBasePortDelayExceededDiscards
+    oid: 1.3.6.1.2.1.17.1.4.1.4
+    type: counter
+    help: The number of frames discarded by this port due to excessive transit delay
+      through the bridge - 1.3.6.1.2.1.17.1.4.1.4
+    indexes:
+    - labelname: dot1dBasePort
+      type: gauge
+  - name: dot1dBasePortMtuExceededDiscards
+    oid: 1.3.6.1.2.1.17.1.4.1.5
+    type: counter
+    help: The number of frames discarded by this port due to an excessive size - 1.3.6.1.2.1.17.1.4.1.5
+    indexes:
+    - labelname: dot1dBasePort
+      type: gauge
+  - name: dot1dStpProtocolSpecification
+    oid: 1.3.6.1.2.1.17.2.1
+    type: gauge
+    help: An indication of what version of the Spanning Tree Protocol is being run
+      - 1.3.6.1.2.1.17.2.1
+    enum_values:
+      1: unknown
+      2: decLb100
+      3: ieee8021d
+  - name: dot1dStpPriority
+    oid: 1.3.6.1.2.1.17.2.2
+    type: gauge
+    help: The value of the write-able portion of the Bridge ID, i.e., the first two
+      octets of the (8 octet long) Bridge ID - 1.3.6.1.2.1.17.2.2
+  - name: dot1dStpTimeSinceTopologyChange
+    oid: 1.3.6.1.2.1.17.2.3
+    type: gauge
+    help: The time (in hundredths of a second) since the last time a topology change
+      was detected by the bridge entity. - 1.3.6.1.2.1.17.2.3
+  - name: dot1dStpTopChanges
+    oid: 1.3.6.1.2.1.17.2.4
+    type: counter
+    help: The total number of topology changes detected by this bridge since the management
+      entity was last reset or initialized. - 1.3.6.1.2.1.17.2.4
+  - name: dot1dStpDesignatedRoot
+    oid: 1.3.6.1.2.1.17.2.5
+    type: OctetString
+    help: The bridge identifier of the root of the spanning tree as determined by
+      the Spanning Tree Protocol as executed by this node - 1.3.6.1.2.1.17.2.5
+  - name: dot1dStpRootCost
+    oid: 1.3.6.1.2.1.17.2.6
+    type: gauge
+    help: The cost of the path to the root as seen from this bridge. - 1.3.6.1.2.1.17.2.6
+  - name: dot1dStpRootPort
+    oid: 1.3.6.1.2.1.17.2.7
+    type: gauge
+    help: The port number of the port which offers the lowest cost path from this
+      bridge to the root bridge. - 1.3.6.1.2.1.17.2.7
+  - name: dot1dStpMaxAge
+    oid: 1.3.6.1.2.1.17.2.8
+    type: gauge
+    help: The maximum age of Spanning Tree Protocol information learned from the network
+      on any port before it is discarded, in units of hundredths of a second - 1.3.6.1.2.1.17.2.8
+  - name: dot1dStpHelloTime
+    oid: 1.3.6.1.2.1.17.2.9
+    type: gauge
+    help: The amount of time between the transmission of Configuration bridge PDUs
+      by this node on any port when it is the root of the spanning tree or trying
+      to become so, in units of hundredths of a second - 1.3.6.1.2.1.17.2.9
+  - name: dot1dStpHoldTime
+    oid: 1.3.6.1.2.1.17.2.10
+    type: gauge
+    help: This time value determines the interval length during which no more than
+      two Configuration bridge PDUs shall be transmitted by this node, in units of
+      hundredths of a second. - 1.3.6.1.2.1.17.2.10
+  - name: dot1dStpForwardDelay
+    oid: 1.3.6.1.2.1.17.2.11
+    type: gauge
+    help: This time value, measured in units of hundredths of a second, controls how
+      fast a port changes its spanning state when moving towards the Forwarding state
+      - 1.3.6.1.2.1.17.2.11
+  - name: dot1dStpBridgeMaxAge
+    oid: 1.3.6.1.2.1.17.2.12
+    type: gauge
+    help: The value that all bridges use for MaxAge when this bridge is acting as
+      the root - 1.3.6.1.2.1.17.2.12
+  - name: dot1dStpBridgeHelloTime
+    oid: 1.3.6.1.2.1.17.2.13
+    type: gauge
+    help: The value that all bridges use for HelloTime when this bridge is acting
+      as the root - 1.3.6.1.2.1.17.2.13
+  - name: dot1dStpBridgeForwardDelay
+    oid: 1.3.6.1.2.1.17.2.14
+    type: gauge
+    help: The value that all bridges use for ForwardDelay when this bridge is acting
+      as the root - 1.3.6.1.2.1.17.2.14
+  - name: dot1dStpPort
+    oid: 1.3.6.1.2.1.17.2.15.1.1
+    type: gauge
+    help: The port number of the port for which this entry contains Spanning Tree
+      Protocol management information. - 1.3.6.1.2.1.17.2.15.1.1
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortPriority
+    oid: 1.3.6.1.2.1.17.2.15.1.2
+    type: gauge
+    help: The value of the priority field which is contained in the first (in network
+      byte order) octet of the (2 octet long) Port ID - 1.3.6.1.2.1.17.2.15.1.2
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortState
+    oid: 1.3.6.1.2.1.17.2.15.1.3
+    type: gauge
+    help: The port's current state as defined by application of the Spanning Tree
+      Protocol - 1.3.6.1.2.1.17.2.15.1.3
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+    enum_values:
+      1: disabled
+      2: blocking
+      3: listening
+      4: learning
+      5: forwarding
+      6: broken
+  - name: dot1dStpPortEnable
+    oid: 1.3.6.1.2.1.17.2.15.1.4
+    type: gauge
+    help: The enabled/disabled status of the port. - 1.3.6.1.2.1.17.2.15.1.4
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+    enum_values:
+      1: enabled
+      2: disabled
+  - name: dot1dStpPortPathCost
+    oid: 1.3.6.1.2.1.17.2.15.1.5
+    type: gauge
+    help: The contribution of this port to the path cost of paths towards the spanning
+      tree root which include this port - 1.3.6.1.2.1.17.2.15.1.5
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortDesignatedRoot
+    oid: 1.3.6.1.2.1.17.2.15.1.6
+    type: OctetString
+    help: The unique Bridge Identifier of the Bridge recorded as the Root in the Configuration
+      BPDUs transmitted by the Designated Bridge for the segment to which the port
+      is attached. - 1.3.6.1.2.1.17.2.15.1.6
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortDesignatedCost
+    oid: 1.3.6.1.2.1.17.2.15.1.7
+    type: gauge
+    help: The path cost of the Designated Port of the segment connected to this port
+      - 1.3.6.1.2.1.17.2.15.1.7
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortDesignatedBridge
+    oid: 1.3.6.1.2.1.17.2.15.1.8
+    type: OctetString
+    help: The Bridge Identifier of the bridge which this port considers to be the
+      Designated Bridge for this port's segment. - 1.3.6.1.2.1.17.2.15.1.8
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortDesignatedPort
+    oid: 1.3.6.1.2.1.17.2.15.1.9
+    type: OctetString
+    help: The Port Identifier of the port on the Designated Bridge for this port's
+      segment. - 1.3.6.1.2.1.17.2.15.1.9
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dStpPortForwardTransitions
+    oid: 1.3.6.1.2.1.17.2.15.1.10
+    type: counter
+    help: The number of times this port has transitioned from the Learning state to
+      the Forwarding state. - 1.3.6.1.2.1.17.2.15.1.10
+    indexes:
+    - labelname: dot1dStpPort
+      type: gauge
+  - name: dot1dTpLearnedEntryDiscards
+    oid: 1.3.6.1.2.1.17.4.1
+    type: counter
+    help: The total number of Forwarding Database entries, which have been or would
+      have been learnt, but have been discarded due to a lack of space to store them
+      in the Forwarding Database - 1.3.6.1.2.1.17.4.1
+  - name: dot1dTpAgingTime
+    oid: 1.3.6.1.2.1.17.4.2
+    type: gauge
+    help: The timeout period in seconds for aging out dynamically learned forwarding
+      information - 1.3.6.1.2.1.17.4.2
+  - name: dot1dTpFdbAddress
+    oid: 1.3.6.1.2.1.17.4.3.1.1
+    type: OctetString
+    help: A unicast MAC address for which the bridge has forwarding and/or filtering
+      information. - 1.3.6.1.2.1.17.4.3.1.1
+    indexes:
+    - labelname: dot1dTpFdbAddress
+      type: OctetString
+      fixed_size: 6
+  - name: dot1dTpFdbPort
+    oid: 1.3.6.1.2.1.17.4.3.1.2
+    type: gauge
+    help: Either the value '0', or the port number of the port on which a frame having
+      a source address equal to the value of the corresponding instance of dot1dTpFdbAddress
+      has been seen - 1.3.6.1.2.1.17.4.3.1.2
+    indexes:
+    - labelname: dot1dTpFdbAddress
+      type: OctetString
+      fixed_size: 6
+  - name: dot1dTpFdbStatus
+    oid: 1.3.6.1.2.1.17.4.3.1.3
+    type: gauge
+    help: The status of this entry - 1.3.6.1.2.1.17.4.3.1.3
+    indexes:
+    - labelname: dot1dTpFdbAddress
+      type: OctetString
+      fixed_size: 6
+    enum_values:
+      1: other
+      2: invalid
+      3: learned
+      4: self
+      5: mgmt
+  - name: dot1dTpPort
+    oid: 1.3.6.1.2.1.17.4.4.1.1
+    type: gauge
+    help: The port number of the port for which this entry contains Transparent bridging
+      management information. - 1.3.6.1.2.1.17.4.4.1.1
+    indexes:
+    - labelname: dot1dTpPort
+      type: gauge
+  - name: dot1dTpPortMaxInfo
+    oid: 1.3.6.1.2.1.17.4.4.1.2
+    type: gauge
+    help: The maximum size of the INFO (non-MAC) field that this port will receive
+      or transmit. - 1.3.6.1.2.1.17.4.4.1.2
+    indexes:
+    - labelname: dot1dTpPort
+      type: gauge
+  - name: dot1dTpPortInFrames
+    oid: 1.3.6.1.2.1.17.4.4.1.3
+    type: counter
+    help: The number of frames that have been received by this port from its segment
+      - 1.3.6.1.2.1.17.4.4.1.3
+    indexes:
+    - labelname: dot1dTpPort
+      type: gauge
+  - name: dot1dTpPortOutFrames
+    oid: 1.3.6.1.2.1.17.4.4.1.4
+    type: counter
+    help: The number of frames that have been transmitted by this port to its segment
+      - 1.3.6.1.2.1.17.4.4.1.4
+    indexes:
+    - labelname: dot1dTpPort
+      type: gauge
+  - name: dot1dTpPortInDiscards
+    oid: 1.3.6.1.2.1.17.4.4.1.5
+    type: counter
+    help: Count of valid frames received which were discarded (i.e., filtered) by
+      the Forwarding Process. - 1.3.6.1.2.1.17.4.4.1.5
+    indexes:
+    - labelname: dot1dTpPort
+      type: gauge
+  - name: dot1dStaticAddress
+    oid: 1.3.6.1.2.1.17.5.1.1.1
+    type: OctetString
+    help: The destination MAC address in a frame to which this entry's filtering information
+      applies - 1.3.6.1.2.1.17.5.1.1.1
+    indexes:
+    - labelname: dot1dStaticAddress
+      type: OctetString
+      fixed_size: 6
+    - labelname: dot1dStaticReceivePort
+      type: gauge
+  - name: dot1dStaticReceivePort
+    oid: 1.3.6.1.2.1.17.5.1.1.2
+    type: gauge
+    help: Either the value '0', or the port number of the port from which a frame
+      must be received in order for this entry's filtering information to apply -
+      1.3.6.1.2.1.17.5.1.1.2
+    indexes:
+    - labelname: dot1dStaticAddress
+      type: OctetString
+      fixed_size: 6
+    - labelname: dot1dStaticReceivePort
+      type: gauge
+  - name: dot1dStaticAllowedToGoTo
+    oid: 1.3.6.1.2.1.17.5.1.1.3
+    type: OctetString
+    help: The set of ports to which frames received from a specific port and destined
+      for a specific MAC address, are allowed to be forwarded - 1.3.6.1.2.1.17.5.1.1.3
+    indexes:
+    - labelname: dot1dStaticAddress
+      type: OctetString
+      fixed_size: 6
+    - labelname: dot1dStaticReceivePort
+      type: gauge
+  - name: dot1dStaticStatus
+    oid: 1.3.6.1.2.1.17.5.1.1.4
+    type: gauge
+    help: This object indicates the status of this entry - 1.3.6.1.2.1.17.5.1.1.4
+    indexes:
+    - labelname: dot1dStaticAddress
+      type: OctetString
+      fixed_size: 6
+    - labelname: dot1dStaticReceivePort
+      type: gauge
+    enum_values:
+      1: other
+      2: invalid
+      3: permanent
+      4: deleteOnReset
+      5: deleteOnTimeout
+  - name: sysDescr
+    oid: 1.3.6.1.2.1.1.1
+    type: DisplayString
+    help: A textual description of the entity - 1.3.6.1.2.1.1.1
+  - name: sysUpTime
+    oid: 1.3.6.1.2.1.1.3
+    type: gauge
+    help: The time (in hundredths of a second) since the network management portion
+      of the system was last re-initialized. - 1.3.6.1.2.1.1.3
+  - name: sysContact
+    oid: 1.3.6.1.2.1.1.4
+    type: DisplayString
+    help: The textual identification of the contact person for this managed node,
+      together with information on how to contact this person - 1.3.6.1.2.1.1.4
+  - name: sysName
+    oid: 1.3.6.1.2.1.1.5
+    type: DisplayString
+    help: An administratively-assigned name for this managed node - 1.3.6.1.2.1.1.5
+  - name: sysLocation
+    oid: 1.3.6.1.2.1.1.6
+    type: DisplayString
+    help: The physical location of this node (e.g., `telephone closet, 3rd floor')
+      - 1.3.6.1.2.1.1.6
+  - name: sysServices
+    oid: 1.3.6.1.2.1.1.7
+    type: gauge
+    help: A value which indicates the set of services that this entity may potentially
+      offers - 1.3.6.1.2.1.1.7
+  - name: sysORLastChange
+    oid: 1.3.6.1.2.1.1.8
+    type: gauge
+    help: The value of sysUpTime at the time of the most recent change in state or
+      value of any instance of sysORID. - 1.3.6.1.2.1.1.8
+  - name: sysORIndex
+    oid: 1.3.6.1.2.1.1.9.1.1
+    type: gauge
+    help: The auxiliary variable used for identifying instances of the columnar objects
+      in the sysORTable. - 1.3.6.1.2.1.1.9.1.1
+    indexes:
+    - labelname: sysORIndex
+      type: gauge
+  - name: sysORDescr
+    oid: 1.3.6.1.2.1.1.9.1.3
+    type: DisplayString
+    help: A textual description of the capabilities identified by the corresponding
+      instance of sysORID. - 1.3.6.1.2.1.1.9.1.3
+    indexes:
+    - labelname: sysORIndex
+      type: gauge
+  - name: sysORUpTime
+    oid: 1.3.6.1.2.1.1.9.1.4
+    type: gauge
+    help: The value of sysUpTime at the time this conceptual row was last instanciated.
+      - 1.3.6.1.2.1.1.9.1.4
+    indexes:
+    - labelname: sysORIndex
+      type: gauge
+  - name: snmpInPkts
+    oid: 1.3.6.1.2.1.11.1
+    type: counter
+    help: The total number of messages delivered to the SNMP entity from the transport
+      service. - 1.3.6.1.2.1.11.1
+  - name: snmpInBadVersions
+    oid: 1.3.6.1.2.1.11.3
+    type: counter
+    help: The total number of SNMP messages which were delivered to the SNMP entity
+      and were for an unsupported SNMP version. - 1.3.6.1.2.1.11.3
+  - name: snmpInBadCommunityNames
+    oid: 1.3.6.1.2.1.11.4
+    type: counter
+    help: The total number of SNMP messages delivered to the SNMP entity which used
+      a SNMP community name not known to said entity. - 1.3.6.1.2.1.11.4
+  - name: snmpInBadCommunityUses
+    oid: 1.3.6.1.2.1.11.5
+    type: counter
+    help: The total number of SNMP messages delivered to the SNMP entity which represented
+      an SNMP operation which was not allowed by the SNMP community named in the message.
+      - 1.3.6.1.2.1.11.5
+  - name: snmpInASNParseErrs
+    oid: 1.3.6.1.2.1.11.6
+    type: counter
+    help: The total number of ASN.1 or BER errors encountered by the SNMP entity when
+      decoding received SNMP messages. - 1.3.6.1.2.1.11.6
+  - name: snmpEnableAuthenTraps
+    oid: 1.3.6.1.2.1.11.30
+    type: gauge
+    help: Indicates whether the SNMP entity is permitted to generate authenticationFailure
+      traps - 1.3.6.1.2.1.11.30
+    enum_values:
+      1: enabled
+      2: disabled
+  - name: snmpSilentDrops
+    oid: 1.3.6.1.2.1.11.31
+    type: counter
+    help: The total number of GetRequest-PDUs, GetNextRequest-PDUs, GetBulkRequest-PDUs,
+      SetRequest-PDUs, and InformRequest-PDUs delivered to the SNMP entity which were
+      silently dropped because the size of a reply containing an alternate Response-PDU
+      with an empty variable-bindings field was greater than either a local constraint
+      or the maximum message size associated with the originator of the request. -
+      1.3.6.1.2.1.11.31
+  - name: snmpProxyDrops
+    oid: 1.3.6.1.2.1.11.32
+    type: counter
+    help: The total number of GetRequest-PDUs, GetNextRequest-PDUs, GetBulkRequest-PDUs,
+      SetRequest-PDUs, and InformRequest-PDUs delivered to the SNMP entity which were
+      silently dropped because the transmission of the (possibly translated) message
+      to a proxy target failed in a manner (other than a time-out) such that no Response-PDU
+      could be returned. - 1.3.6.1.2.1.11.32
+  - name: snmpOutPkts
+    oid: 1.3.6.1.2.1.11.2
+    type: counter
+    help: The total number of SNMP Messages which were passed from the SNMP protocol
+      entity to the transport service. - 1.3.6.1.2.1.11.2
+  - name: snmpInTooBigs
+    oid: 1.3.6.1.2.1.11.8
+    type: counter
+    help: The total number of SNMP PDUs which were delivered to the SNMP protocol
+      entity and for which the value of the error-status field is `tooBig'. - 1.3.6.1.2.1.11.8
+  - name: snmpInNoSuchNames
+    oid: 1.3.6.1.2.1.11.9
+    type: counter
+    help: The total number of SNMP PDUs which were delivered to the SNMP protocol
+      entity and for which the value of the error-status field is `noSuchName'. -
+      1.3.6.1.2.1.11.9
+  - name: snmpInBadValues
+    oid: 1.3.6.1.2.1.11.10
+    type: counter
+    help: The total number of SNMP PDUs which were delivered to the SNMP protocol
+      entity and for which the value of the error-status field is `badValue'. - 1.3.6.1.2.1.11.10
+  - name: snmpInReadOnlys
+    oid: 1.3.6.1.2.1.11.11
+    type: counter
+    help: The total number valid SNMP PDUs which were delivered to the SNMP protocol
+      entity and for which the value of the error-status field is `readOnly' - 1.3.6.1.2.1.11.11
+  - name: snmpInGenErrs
+    oid: 1.3.6.1.2.1.11.12
+    type: counter
+    help: The total number of SNMP PDUs which were delivered to the SNMP protocol
+      entity and for which the value of the error-status field is `genErr'. - 1.3.6.1.2.1.11.12
+  - name: snmpInTotalReqVars
+    oid: 1.3.6.1.2.1.11.13
+    type: counter
+    help: The total number of MIB objects which have been retrieved successfully by
+      the SNMP protocol entity as the result of receiving valid SNMP Get-Request and
+      Get-Next PDUs. - 1.3.6.1.2.1.11.13
+  - name: snmpInTotalSetVars
+    oid: 1.3.6.1.2.1.11.14
+    type: counter
+    help: The total number of MIB objects which have been altered successfully by
+      the SNMP protocol entity as the result of receiving valid SNMP Set-Request PDUs.
+      - 1.3.6.1.2.1.11.14
+  - name: snmpInGetRequests
+    oid: 1.3.6.1.2.1.11.15
+    type: counter
+    help: The total number of SNMP Get-Request PDUs which have been accepted and processed
+      by the SNMP protocol entity. - 1.3.6.1.2.1.11.15
+  - name: snmpInGetNexts
+    oid: 1.3.6.1.2.1.11.16
+    type: counter
+    help: The total number of SNMP Get-Next PDUs which have been accepted and processed
+      by the SNMP protocol entity. - 1.3.6.1.2.1.11.16
+  - name: snmpInSetRequests
+    oid: 1.3.6.1.2.1.11.17
+    type: counter
+    help: The total number of SNMP Set-Request PDUs which have been accepted and processed
+      by the SNMP protocol entity. - 1.3.6.1.2.1.11.17
+  - name: snmpInGetResponses
+    oid: 1.3.6.1.2.1.11.18
+    type: counter
+    help: The total number of SNMP Get-Response PDUs which have been accepted and
+      processed by the SNMP protocol entity. - 1.3.6.1.2.1.11.18
+  - name: snmpInTraps
+    oid: 1.3.6.1.2.1.11.19
+    type: counter
+    help: The total number of SNMP Trap PDUs which have been accepted and processed
+      by the SNMP protocol entity. - 1.3.6.1.2.1.11.19
+  - name: snmpOutTooBigs
+    oid: 1.3.6.1.2.1.11.20
+    type: counter
+    help: The total number of SNMP PDUs which were generated by the SNMP protocol
+      entity and for which the value of the error-status field is `tooBig.' - 1.3.6.1.2.1.11.20
+  - name: snmpOutNoSuchNames
+    oid: 1.3.6.1.2.1.11.21
+    type: counter
+    help: The total number of SNMP PDUs which were generated by the SNMP protocol
+      entity and for which the value of the error-status is `noSuchName'. - 1.3.6.1.2.1.11.21
+  - name: snmpOutBadValues
+    oid: 1.3.6.1.2.1.11.22
+    type: counter
+    help: The total number of SNMP PDUs which were generated by the SNMP protocol
+      entity and for which the value of the error-status field is `badValue'. - 1.3.6.1.2.1.11.22
+  - name: snmpOutGenErrs
+    oid: 1.3.6.1.2.1.11.24
+    type: counter
+    help: The total number of SNMP PDUs which were generated by the SNMP protocol
+      entity and for which the value of the error-status field is `genErr'. - 1.3.6.1.2.1.11.24
+  - name: snmpOutGetRequests
+    oid: 1.3.6.1.2.1.11.25
+    type: counter
+    help: The total number of SNMP Get-Request PDUs which have been generated by the
+      SNMP protocol entity. - 1.3.6.1.2.1.11.25
+  - name: snmpOutGetNexts
+    oid: 1.3.6.1.2.1.11.26
+    type: counter
+    help: The total number of SNMP Get-Next PDUs which have been generated by the
+      SNMP protocol entity. - 1.3.6.1.2.1.11.26
+  - name: snmpOutSetRequests
+    oid: 1.3.6.1.2.1.11.27
+    type: counter
+    help: The total number of SNMP Set-Request PDUs which have been generated by the
+      SNMP protocol entity. - 1.3.6.1.2.1.11.27
+  - name: snmpOutGetResponses
+    oid: 1.3.6.1.2.1.11.28
+    type: counter
+    help: The total number of SNMP Get-Response PDUs which have been generated by
+      the SNMP protocol entity. - 1.3.6.1.2.1.11.28
+  - name: snmpOutTraps
+    oid: 1.3.6.1.2.1.11.29
+    type: counter
+    help: The total number of SNMP Trap PDUs which have been generated by the SNMP
+      protocol entity. - 1.3.6.1.2.1.11.29
+  - name: dot3StatsIndex
+    oid: 1.3.6.1.2.1.10.7.2.1.1
+    type: gauge
+    help: An index value that uniquely identifies an interface to an ethernet-like
+      medium - 1.3.6.1.2.1.10.7.2.1.1
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsAlignmentErrors
+    oid: 1.3.6.1.2.1.10.7.2.1.2
+    type: counter
+    help: A count of frames received on a particular interface that are not an integral
+      number of octets in length and do not pass the FCS check - 1.3.6.1.2.1.10.7.2.1.2
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsFCSErrors
+    oid: 1.3.6.1.2.1.10.7.2.1.3
+    type: counter
+    help: A count of frames received on a particular interface that are an integral
+      number of octets in length but do not pass the FCS check - 1.3.6.1.2.1.10.7.2.1.3
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsSingleCollisionFrames
+    oid: 1.3.6.1.2.1.10.7.2.1.4
+    type: counter
+    help: A count of successfully transmitted frames on a particular interface for
+      which transmission is inhibited by exactly one collision - 1.3.6.1.2.1.10.7.2.1.4
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsMultipleCollisionFrames
+    oid: 1.3.6.1.2.1.10.7.2.1.5
+    type: counter
+    help: A count of successfully transmitted frames on a particular interface for
+      which transmission is inhibited by more than one collision - 1.3.6.1.2.1.10.7.2.1.5
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsSQETestErrors
+    oid: 1.3.6.1.2.1.10.7.2.1.6
+    type: counter
+    help: A count of times that the SQE TEST ERROR message is generated by the PLS
+      sublayer for a particular interface - 1.3.6.1.2.1.10.7.2.1.6
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsDeferredTransmissions
+    oid: 1.3.6.1.2.1.10.7.2.1.7
+    type: counter
+    help: A count of frames for which the first transmission attempt on a particular
+      interface is delayed because the medium is busy - 1.3.6.1.2.1.10.7.2.1.7
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsLateCollisions
+    oid: 1.3.6.1.2.1.10.7.2.1.8
+    type: counter
+    help: The number of times that a collision is detected on a particular interface
+      later than 512 bit-times into the transmission of a packet - 1.3.6.1.2.1.10.7.2.1.8
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsExcessiveCollisions
+    oid: 1.3.6.1.2.1.10.7.2.1.9
+    type: counter
+    help: A count of frames for which transmission on a particular interface fails
+      due to excessive collisions. - 1.3.6.1.2.1.10.7.2.1.9
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsInternalMacTransmitErrors
+    oid: 1.3.6.1.2.1.10.7.2.1.10
+    type: counter
+    help: A count of frames for which transmission on a particular interface fails
+      due to an internal MAC sublayer transmit error - 1.3.6.1.2.1.10.7.2.1.10
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsCarrierSenseErrors
+    oid: 1.3.6.1.2.1.10.7.2.1.11
+    type: counter
+    help: The number of times that the carrier sense condition was lost or never asserted
+      when attempting to transmit a frame on a particular interface - 1.3.6.1.2.1.10.7.2.1.11
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsFrameTooLongs
+    oid: 1.3.6.1.2.1.10.7.2.1.13
+    type: counter
+    help: A count of frames received on a particular interface that exceed the maximum
+      permitted frame size - 1.3.6.1.2.1.10.7.2.1.13
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: dot3StatsInternalMacReceiveErrors
+    oid: 1.3.6.1.2.1.10.7.2.1.16
+    type: counter
+    help: A count of frames for which reception on a particular interface fails due
+      to an internal MAC sublayer receive error - 1.3.6.1.2.1.10.7.2.1.16
+    indexes:
+    - labelname: dot3StatsIndex
+      type: gauge
+  - name: fddimibSMTNumber
+    oid: 1.3.6.1.2.1.10.15.73.1.1
+    type: gauge
+    help: The number of SMT implementations (regardless of their current state) on
+      this network management application entity - 1.3.6.1.2.1.10.15.73.1.1
+  - name: fddimibSMTIndex
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.1
+    type: gauge
+    help: A unique value for each SMT - 1.3.6.1.2.1.10.15.73.1.2.1.1
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTStationId
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.2
+    type: OctetString
+    help: Used to uniquely identify an FDDI station. - 1.3.6.1.2.1.10.15.73.1.2.1.2
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTOpVersionId
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.3
+    type: gauge
+    help: The version that this station is using for its operation (refer to ANSI
+      7.1.2.2) - 1.3.6.1.2.1.10.15.73.1.2.1.3
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTHiVersionId
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.4
+    type: gauge
+    help: The highest version of SMT that this station supports (refer to ANSI 7.1.2.2).
+      - 1.3.6.1.2.1.10.15.73.1.2.1.4
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTLoVersionId
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.5
+    type: gauge
+    help: The lowest version of SMT that this station supports (refer to ANSI 7.1.2.2).
+      - 1.3.6.1.2.1.10.15.73.1.2.1.5
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTUserData
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.6
+    type: OctetString
+    help: This variable contains 32 octets of user defined information - 1.3.6.1.2.1.10.15.73.1.2.1.6
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTMIBVersionId
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.7
+    type: gauge
+    help: The version of the FDDI MIB of this station - 1.3.6.1.2.1.10.15.73.1.2.1.7
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTMACCts
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.8
+    type: gauge
+    help: The number of MACs in this station or concentrator. - 1.3.6.1.2.1.10.15.73.1.2.1.8
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTNonMasterCts
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.9
+    type: gauge
+    help: The value of this variable is the number of A, B, and S ports in this station
+      or concentrator. - 1.3.6.1.2.1.10.15.73.1.2.1.9
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTMasterCts
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.10
+    type: gauge
+    help: The number of M Ports in a node - 1.3.6.1.2.1.10.15.73.1.2.1.10
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTAvailablePaths
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.11
+    type: gauge
+    help: A value that indicates the PATH types available in the station - 1.3.6.1.2.1.10.15.73.1.2.1.11
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTConfigCapabilities
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.12
+    type: gauge
+    help: A value that indicates the configuration capabilities of a node - 1.3.6.1.2.1.10.15.73.1.2.1.12
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTConfigPolicy
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.13
+    type: gauge
+    help: A value that indicates the configuration policies currently desired in a
+      node - 1.3.6.1.2.1.10.15.73.1.2.1.13
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTConnectionPolicy
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.14
+    type: gauge
+    help: A value representing the connection policies in effect in a node - 1.3.6.1.2.1.10.15.73.1.2.1.14
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTTNotify
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.15
+    type: gauge
+    help: The timer, expressed in seconds, used in the Neighbor Notification protocol
+      - 1.3.6.1.2.1.10.15.73.1.2.1.15
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTStatRptPolicy
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.16
+    type: gauge
+    help: If true, indicates that the node will generate Status Reporting Frames for
+      its implemented events and conditions - 1.3.6.1.2.1.10.15.73.1.2.1.16
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibSMTTraceMaxExpiration
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.17
+    type: gauge
+    help: Reference Trace_Max (refer to ANSI SMT 9.4.4.2.2). - 1.3.6.1.2.1.10.15.73.1.2.1.17
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTBypassPresent
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.18
+    type: gauge
+    help: A flag indicating if the station has a bypass on its AB port pair. - 1.3.6.1.2.1.10.15.73.1.2.1.18
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibSMTECMState
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.19
+    type: gauge
+    help: Indicates the current state of the ECM state machine (refer to ANSI SMT
+      9.5.2). - 1.3.6.1.2.1.10.15.73.1.2.1.19
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: ec0
+      2: ec1
+      3: ec2
+      4: ec3
+      5: ec4
+      6: ec5
+      7: ec6
+      8: ec7
+  - name: fddimibSMTCFState
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.20
+    type: gauge
+    help: The attachment configuration for the station or concentrator (refer to ANSI
+      SMT 9.7.2.2). - 1.3.6.1.2.1.10.15.73.1.2.1.20
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: cf0
+      2: cf1
+      3: cf2
+      4: cf3
+      5: cf4
+      6: cf5
+      7: cf6
+      8: cf7
+      9: cf8
+      10: cf9
+      11: cf10
+      12: cf11
+      13: cf12
+  - name: fddimibSMTRemoteDisconnectFlag
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.21
+    type: gauge
+    help: A flag indicating that the station was remotely disconnected from the network
+      as a result of receiving an fddiSMTAction, disconnect (refer to ANSI SMT 6.4.5.3)
+      in a Parameter Management Frame - 1.3.6.1.2.1.10.15.73.1.2.1.21
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibSMTStationStatus
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.22
+    type: gauge
+    help: The current status of the primary and secondary paths within this station.
+      - 1.3.6.1.2.1.10.15.73.1.2.1.22
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: concatenated
+      2: separated
+      3: thru
+  - name: fddimibSMTPeerWrapFlag
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.23
+    type: gauge
+    help: This variable assumes the value of the PeerWrapFlag in CFM (refer to ANSI
+      SMT 9.7.2.4.4). - 1.3.6.1.2.1.10.15.73.1.2.1.23
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibSMTTimeStamp
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.24
+    type: gauge
+    help: This variable assumes the value of TimeStamp (refer to ANSI SMT 8.3.2.1).
+      - 1.3.6.1.2.1.10.15.73.1.2.1.24
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTTransitionTimeStamp
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.25
+    type: gauge
+    help: This variable assumes the value of TransitionTimeStamp (refer to ANSI SMT
+      8.3.2.1). - 1.3.6.1.2.1.10.15.73.1.2.1.25
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+  - name: fddimibSMTStationAction
+    oid: 1.3.6.1.2.1.10.15.73.1.2.1.26
+    type: gauge
+    help: This object, when read, always returns a value of other(1) - 1.3.6.1.2.1.10.15.73.1.2.1.26
+    indexes:
+    - labelname: fddimibSMTIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: connect
+      3: disconnect
+      4: path-Test
+      5: self-Test
+      6: disable-a
+      7: disable-b
+      8: disable-m
+  - name: fddimibMACNumber
+    oid: 1.3.6.1.2.1.10.15.73.2.1
+    type: gauge
+    help: The total number of MAC implementations (across all SMTs) on this network
+      management application entity - 1.3.6.1.2.1.10.15.73.2.1
+  - name: fddimibMACSMTIndex
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.1
+    type: gauge
+    help: The value of the SMT index associated with this MAC. - 1.3.6.1.2.1.10.15.73.2.2.1.1
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACIndex
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.2
+    type: gauge
+    help: Index variable for uniquely identifying the MAC object instances, which
+      is the same as the corresponding resource index in SMT. - 1.3.6.1.2.1.10.15.73.2.2.1.2
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACIfIndex
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.3
+    type: gauge
+    help: The value of the MIB-II ifIndex corresponding to this MAC - 1.3.6.1.2.1.10.15.73.2.2.1.3
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACFrameStatusFunctions
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.4
+    type: gauge
+    help: Indicates the MAC's optional Frame Status processing functions - 1.3.6.1.2.1.10.15.73.2.2.1.4
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTMaxCapability
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.5
+    type: gauge
+    help: Indicates the maximum time value of fddiMACTMax that this MAC can support.
+      - 1.3.6.1.2.1.10.15.73.2.2.1.5
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTVXCapability
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.6
+    type: gauge
+    help: Indicates the maximum time value of fddiMACTvxValue that this MAC can support.
+      - 1.3.6.1.2.1.10.15.73.2.2.1.6
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACAvailablePaths
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.7
+    type: gauge
+    help: Indicates the paths available for this MAC (refer to ANSI SMT 9.7.7) - 1.3.6.1.2.1.10.15.73.2.2.1.7
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACCurrentPath
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.8
+    type: gauge
+    help: Indicates the Path into which this MAC is currently inserted (refer to ANSI
+      9.7.7). - 1.3.6.1.2.1.10.15.73.2.2.1.8
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: isolated
+      2: local
+      3: secondary
+      4: primary
+      5: concatenated
+      6: thru
+  - name: fddimibMACUpstreamNbr
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.9
+    type: OctetString
+    help: The MAC's upstream neighbor's long individual MAC address - 1.3.6.1.2.1.10.15.73.2.2.1.9
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACDownstreamNbr
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.10
+    type: OctetString
+    help: The MAC's downstream neighbor's long individual MAC address - 1.3.6.1.2.1.10.15.73.2.2.1.10
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACOldUpstreamNbr
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.11
+    type: OctetString
+    help: The previous value of the MAC's upstream neighbor's long individual MAC
+      address - 1.3.6.1.2.1.10.15.73.2.2.1.11
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACOldDownstreamNbr
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.12
+    type: OctetString
+    help: The previous value of the MAC's downstream neighbor's long individual MAC
+      address - 1.3.6.1.2.1.10.15.73.2.2.1.12
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACDupAddressTest
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.13
+    type: gauge
+    help: The Duplicate Address Test flag, Dup_Addr_Test (refer to ANSI 8.2). - 1.3.6.1.2.1.10.15.73.2.2.1.13
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: none
+      2: pass
+      3: fail
+  - name: fddimibMACRequestedPaths
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.14
+    type: gauge
+    help: List of permitted Paths which specifies the Path(s) into which the MAC may
+      be inserted (refer to ansi SMT 9.7) - 1.3.6.1.2.1.10.15.73.2.2.1.14
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACDownstreamPORTType
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.15
+    type: gauge
+    help: Indicates the PC-Type of the first port that is downstream of this MAC (the
+      exit port). - 1.3.6.1.2.1.10.15.73.2.2.1.15
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: a
+      2: b
+      3: s
+      4: m
+      5: none
+  - name: fddimibMACSMTAddress
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.16
+    type: OctetString
+    help: The 48-bit individual address of the MAC used for SMT frames. - 1.3.6.1.2.1.10.15.73.2.2.1.16
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTReq
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.17
+    type: gauge
+    help: This variable is the T_Req_value passed to the MAC - 1.3.6.1.2.1.10.15.73.2.2.1.17
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTNeg
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.18
+    type: gauge
+    help: It is reported as a FddiTimeNano number. - 1.3.6.1.2.1.10.15.73.2.2.1.18
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTMax
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.19
+    type: gauge
+    help: This variable is the T_Max_value passed to the MAC - 1.3.6.1.2.1.10.15.73.2.2.1.19
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTvxValue
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.20
+    type: gauge
+    help: This variable is the TVX_value passed to the MAC - 1.3.6.1.2.1.10.15.73.2.2.1.20
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACFrameCts
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.21
+    type: counter
+    help: A count of the number of frames received by this MAC (refer to ANSI MAC
+      7.5.1). - 1.3.6.1.2.1.10.15.73.2.2.1.21
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACCopiedCts
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.22
+    type: counter
+    help: A count that should as closely as possible match the number of frames addressed
+      to (A bit set) and successfully copied into the station's receive buffers (C
+      bit set) by this MAC (refer to ANSI MAC 7.5) - 1.3.6.1.2.1.10.15.73.2.2.1.22
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTransmitCts
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.23
+    type: counter
+    help: A count that should as closely as possible match the number of frames transmitted
+      by this MAC (refer to ANSI MAC 7.5) - 1.3.6.1.2.1.10.15.73.2.2.1.23
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACErrorCts
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.24
+    type: counter
+    help: A count of the number of frames that were detected in error by this MAC
+      that had not been detected in error by another MAC (refer to ANSI MAC 7.5.2).
+      - 1.3.6.1.2.1.10.15.73.2.2.1.24
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACLostCts
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.25
+    type: counter
+    help: A count of the number of instances that this MAC detected a format error
+      during frame reception such that the frame was stripped (refer to ANSI MAC 7.5.3).
+      - 1.3.6.1.2.1.10.15.73.2.2.1.25
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACFrameErrorThreshold
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.26
+    type: gauge
+    help: A threshold for determining when a MAC Condition report (see ANSI 8.3.1.1)
+      shall be generated - 1.3.6.1.2.1.10.15.73.2.2.1.26
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACFrameErrorRatio
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.27
+    type: gauge
+    help: This variable is the value of the ratio, ((delta fddiMACLostCts + delta
+      fddiMACErrorCts) / (delta fddiMACFrameCts + delta fddiMACLostCts )) * 2**16
+      - 1.3.6.1.2.1.10.15.73.2.2.1.27
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACRMTState
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.28
+    type: gauge
+    help: Indicates the current state of the RMT State Machine (refer to ANSI 10.3.2).
+      - 1.3.6.1.2.1.10.15.73.2.2.1.28
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: rm0
+      2: rm1
+      3: rm2
+      4: rm3
+      5: rm4
+      6: rm5
+      7: rm6
+      8: rm7
+  - name: fddimibMACDaFlag
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.29
+    type: gauge
+    help: The RMT flag Duplicate Address Flag, DA_Flag (refer to ANSI 10.2.1.2). -
+      1.3.6.1.2.1.10.15.73.2.2.1.29
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACUnaDaFlag
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.30
+    type: gauge
+    help: A flag, UNDA_Flag (refer to ANSI 8.2.2.1), set when the upstream neighbor
+      reports a duplicate address condition - 1.3.6.1.2.1.10.15.73.2.2.1.30
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACFrameErrorFlag
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.31
+    type: gauge
+    help: Indicates the MAC Frame Error Condition is present when set - 1.3.6.1.2.1.10.15.73.2.2.1.31
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACMAUnitdataAvailable
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.32
+    type: gauge
+    help: This variable shall take on the value of the MAC_Avail flag defined in RMT.
+      - 1.3.6.1.2.1.10.15.73.2.2.1.32
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACHardwarePresent
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.33
+    type: gauge
+    help: This variable indicates the presence of underlying hardware support for
+      this MAC object - 1.3.6.1.2.1.10.15.73.2.2.1.33
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACMAUnitdataEnable
+    oid: 1.3.6.1.2.1.10.15.73.2.2.1.34
+    type: gauge
+    help: This variable determines the value of the MA_UNITDATA_Enable flag in RMT
+      - 1.3.6.1.2.1.10.15.73.2.2.1.34
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACTokenCts
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.1
+    type: counter
+    help: A count that should as closely as possible match the number of times the
+      station has received a token (total of non-restricted and restricted) on this
+      MAC (see ANSI MAC 7.4) - 1.3.6.1.2.1.10.15.73.3.1.1.1
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACTvxExpiredCts
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.2
+    type: counter
+    help: A count that should as closely as possible match the number of times that
+      TVX has expired. - 1.3.6.1.2.1.10.15.73.3.1.1.2
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACNotCopiedCts
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.3
+    type: counter
+    help: A count that should as closely as possible match the number of frames that
+      were addressed to this MAC but were not copied into its receive buffers (see
+      ANSI MAC 7.5) - 1.3.6.1.2.1.10.15.73.3.1.1.3
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACLateCts
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.4
+    type: counter
+    help: A count that should as closely as possible match the number of TRT expirations
+      since this MAC was reset or a token was received (refer to ANSI MAC 7.4.5).
+      - 1.3.6.1.2.1.10.15.73.3.1.1.4
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACRingOpCts
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.5
+    type: counter
+    help: The count of the number of times the ring has entered the 'Ring_Operational'
+      state from the 'Ring Not Operational' state - 1.3.6.1.2.1.10.15.73.3.1.1.5
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACNotCopiedRatio
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.6
+    type: gauge
+    help: 'This variable is the value of the ratio: (delta fddiMACNotCopiedCts / (delta
+      fddiMACCopiedCts + delta fddiMACNotCopiedCts )) * 2**16 - 1.3.6.1.2.1.10.15.73.3.1.1.6'
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibMACNotCopiedFlag
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.7
+    type: gauge
+    help: Indicates that the Not Copied condition is present when read as true(1)
+      - 1.3.6.1.2.1.10.15.73.3.1.1.7
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibMACNotCopiedThreshold
+    oid: 1.3.6.1.2.1.10.15.73.3.1.1.8
+    type: gauge
+    help: A threshold for determining when a MAC condition report shall be generated
+      - 1.3.6.1.2.1.10.15.73.3.1.1.8
+    indexes:
+    - labelname: fddimibMACSMTIndex
+      type: gauge
+    - labelname: fddimibMACIndex
+      type: gauge
+  - name: fddimibPATHNumber
+    oid: 1.3.6.1.2.1.10.15.73.4.1
+    type: gauge
+    help: The total number of PATHs possible (across all SMTs) on this network management
+      application entity - 1.3.6.1.2.1.10.15.73.4.1
+  - name: fddimibPATHSMTIndex
+    oid: 1.3.6.1.2.1.10.15.73.4.2.1.1
+    type: gauge
+    help: The value of the SMT index associated with this PATH. - 1.3.6.1.2.1.10.15.73.4.2.1.1
+    indexes:
+    - labelname: fddimibPATHSMTIndex
+      type: gauge
+    - labelname: fddimibPATHIndex
+      type: gauge
+  - name: fddimibPATHIndex
+    oid: 1.3.6.1.2.1.10.15.73.4.2.1.2
+    type: gauge
+    help: Index variable for uniquely identifying the primary, secondary and local
+      PATH object instances - 1.3.6.1.2.1.10.15.73.4.2.1.2
+    indexes:
+    - labelname: fddimibPATHSMTIndex
+      type: gauge
+    - labelname: fddimibPATHIndex
+      type: gauge
+  - name: fddimibPATHTVXLowerBound
+    oid: 1.3.6.1.2.1.10.15.73.4.2.1.3
+    type: gauge
+    help: Specifies the minimum time value of fddiMACTvxValue that shall be used by
+      any MAC that is configured in this path - 1.3.6.1.2.1.10.15.73.4.2.1.3
+    indexes:
+    - labelname: fddimibPATHSMTIndex
+      type: gauge
+    - labelname: fddimibPATHIndex
+      type: gauge
+  - name: fddimibPATHTMaxLowerBound
+    oid: 1.3.6.1.2.1.10.15.73.4.2.1.4
+    type: gauge
+    help: Specifies the minimum time value of fddiMACTMax that shall be used by any
+      MAC that is configured in this path - 1.3.6.1.2.1.10.15.73.4.2.1.4
+    indexes:
+    - labelname: fddimibPATHSMTIndex
+      type: gauge
+    - labelname: fddimibPATHIndex
+      type: gauge
+  - name: fddimibPATHMaxTReq
+    oid: 1.3.6.1.2.1.10.15.73.4.2.1.5
+    type: gauge
+    help: Specifies the maximum time value of fddiMACT-Req that shall be used by any
+      MAC that is configured in this path - 1.3.6.1.2.1.10.15.73.4.2.1.5
+    indexes:
+    - labelname: fddimibPATHSMTIndex
+      type: gauge
+    - labelname: fddimibPATHIndex
+      type: gauge
+  - name: fddimibPATHConfigSMTIndex
+    oid: 1.3.6.1.2.1.10.15.73.4.3.1.1
+    type: gauge
+    help: The value of the SMT index associated with this configuration entry. - 1.3.6.1.2.1.10.15.73.4.3.1.1
+    indexes:
+    - labelname: fddimibPATHConfigSMTIndex
+      type: gauge
+    - labelname: fddimibPATHConfigPATHIndex
+      type: gauge
+    - labelname: fddimibPATHConfigTokenOrder
+      type: gauge
+  - name: fddimibPATHConfigPATHIndex
+    oid: 1.3.6.1.2.1.10.15.73.4.3.1.2
+    type: gauge
+    help: The value of the PATH resource index associated with this configuration
+      entry. - 1.3.6.1.2.1.10.15.73.4.3.1.2
+    indexes:
+    - labelname: fddimibPATHConfigSMTIndex
+      type: gauge
+    - labelname: fddimibPATHConfigPATHIndex
+      type: gauge
+    - labelname: fddimibPATHConfigTokenOrder
+      type: gauge
+  - name: fddimibPATHConfigTokenOrder
+    oid: 1.3.6.1.2.1.10.15.73.4.3.1.3
+    type: gauge
+    help: An object associated with Token order for this entry - 1.3.6.1.2.1.10.15.73.4.3.1.3
+    indexes:
+    - labelname: fddimibPATHConfigSMTIndex
+      type: gauge
+    - labelname: fddimibPATHConfigPATHIndex
+      type: gauge
+    - labelname: fddimibPATHConfigTokenOrder
+      type: gauge
+  - name: fddimibPATHConfigResourceType
+    oid: 1.3.6.1.2.1.10.15.73.4.3.1.4
+    type: gauge
+    help: The type of resource associated with this configuration entry. - 1.3.6.1.2.1.10.15.73.4.3.1.4
+    indexes:
+    - labelname: fddimibPATHConfigSMTIndex
+      type: gauge
+    - labelname: fddimibPATHConfigPATHIndex
+      type: gauge
+    - labelname: fddimibPATHConfigTokenOrder
+      type: gauge
+    enum_values:
+      2: mac
+      4: port
+  - name: fddimibPATHConfigResourceIndex
+    oid: 1.3.6.1.2.1.10.15.73.4.3.1.5
+    type: gauge
+    help: The value of the SMT resource index used to refer to the instance of this
+      MAC or Port resource. - 1.3.6.1.2.1.10.15.73.4.3.1.5
+    indexes:
+    - labelname: fddimibPATHConfigSMTIndex
+      type: gauge
+    - labelname: fddimibPATHConfigPATHIndex
+      type: gauge
+    - labelname: fddimibPATHConfigTokenOrder
+      type: gauge
+  - name: fddimibPATHConfigCurrentPath
+    oid: 1.3.6.1.2.1.10.15.73.4.3.1.6
+    type: gauge
+    help: The current insertion status for this resource on this Path. - 1.3.6.1.2.1.10.15.73.4.3.1.6
+    indexes:
+    - labelname: fddimibPATHConfigSMTIndex
+      type: gauge
+    - labelname: fddimibPATHConfigPATHIndex
+      type: gauge
+    - labelname: fddimibPATHConfigTokenOrder
+      type: gauge
+    enum_values:
+      1: isolated
+      2: local
+      3: secondary
+      4: primary
+      5: concatenated
+      6: thru
+  - name: fddimibPORTNumber
+    oid: 1.3.6.1.2.1.10.15.73.5.1
+    type: gauge
+    help: The total number of PORT implementations (across all SMTs) on this network
+      management application entity - 1.3.6.1.2.1.10.15.73.5.1
+  - name: fddimibPORTSMTIndex
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.1
+    type: gauge
+    help: The value of the SMT index associated with this PORT. - 1.3.6.1.2.1.10.15.73.5.2.1.1
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTIndex
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.2
+    type: gauge
+    help: A unique value for each PORT within a given SMT, which is the same as the
+      corresponding resource index in SMT - 1.3.6.1.2.1.10.15.73.5.2.1.2
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTMyType
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.3
+    type: gauge
+    help: The value of the PORT's PC_Type (refer to ANSI 9.4.1, and 9.6.3.2). - 1.3.6.1.2.1.10.15.73.5.2.1.3
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: a
+      2: b
+      3: s
+      4: m
+      5: none
+  - name: fddimibPORTNeighborType
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.4
+    type: gauge
+    help: The type of the remote PORT as determined in PCM - 1.3.6.1.2.1.10.15.73.5.2.1.4
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: a
+      2: b
+      3: s
+      4: m
+      5: none
+  - name: fddimibPORTConnectionPolicies
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.5
+    type: gauge
+    help: A value representing the PORT's connection policies desired in the node
+      - 1.3.6.1.2.1.10.15.73.5.2.1.5
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTMACIndicated
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.6
+    type: gauge
+    help: The indications (T_Val(9), R_Val(9)) in PC- Signalling, of the intent to
+      place a MAC in the output token path to a PORT (refer to ANSI SMT 9.6.3.2.).
+      - 1.3.6.1.2.1.10.15.73.5.2.1.6
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: tVal9FalseRVal9False
+      2: tVal9FalseRVal9True
+      3: tVal9TrueRVal9False
+      4: tVal9TrueRVal9True
+  - name: fddimibPORTCurrentPath
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.7
+    type: gauge
+    help: Indicates the Path(s) into which this PORT is currently inserted. - 1.3.6.1.2.1.10.15.73.5.2.1.7
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: ce0
+      2: ce1
+      3: ce2
+      4: ce3
+      5: ce4
+      6: ce5
+  - name: fddimibPORTRequestedPaths
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.8
+    type: OctetString
+    help: This variable is a list of permitted Paths where each list element defines
+      the Port's permitted Paths - 1.3.6.1.2.1.10.15.73.5.2.1.8
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTMACPlacement
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.9
+    type: gauge
+    help: Indicates the MAC, if any, whose transmit path exits the station via this
+      PORT - 1.3.6.1.2.1.10.15.73.5.2.1.9
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTAvailablePaths
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.10
+    type: gauge
+    help: Indicates the Paths which are available to this Port - 1.3.6.1.2.1.10.15.73.5.2.1.10
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTPMDClass
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.11
+    type: gauge
+    help: This variable indicates the type of PMD entity associated with this port.
+      - 1.3.6.1.2.1.10.15.73.5.2.1.11
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: multimode
+      2: single-mode1
+      3: single-mode2
+      4: sonet
+      5: low-cost-fiber
+      6: twisted-pair
+      7: unknown
+      8: unspecified
+  - name: fddimibPORTConnectionCapabilities
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.12
+    type: gauge
+    help: A value that indicates the connection capabilities of the port - 1.3.6.1.2.1.10.15.73.5.2.1.12
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTBSFlag
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.13
+    type: gauge
+    help: This variable assumes the value of the BS_Flag (refer to ANSI SMT 9.4.3.3).
+      - 1.3.6.1.2.1.10.15.73.5.2.1.13
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibPORTLCTFailCts
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.14
+    type: counter
+    help: The count of the consecutive times the link confidence test (LCT) has failed
+      during connection management (refer to ANSI 9.4.1). - 1.3.6.1.2.1.10.15.73.5.2.1.14
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTLerEstimate
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.15
+    type: gauge
+    help: A long term average link error rate - 1.3.6.1.2.1.10.15.73.5.2.1.15
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTLemRejectCts
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.16
+    type: counter
+    help: A link error monitoring count of the times that a link has been rejected.
+      - 1.3.6.1.2.1.10.15.73.5.2.1.16
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTLemCts
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.17
+    type: counter
+    help: The aggregate link error monitor error count, set to zero only on station
+      initialization. - 1.3.6.1.2.1.10.15.73.5.2.1.17
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTLerCutoff
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.18
+    type: gauge
+    help: The link error rate estimate at which a link connection will be broken -
+      1.3.6.1.2.1.10.15.73.5.2.1.18
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTLerAlarm
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.19
+    type: gauge
+    help: The link error rate estimate at which a link connection will generate an
+      alarm - 1.3.6.1.2.1.10.15.73.5.2.1.19
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+  - name: fddimibPORTConnectState
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.20
+    type: gauge
+    help: An indication of the connect state of this PORT and is equal to the value
+      of Connect_State (refer to ANSI 9.4.1) - 1.3.6.1.2.1.10.15.73.5.2.1.20
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: disabled
+      2: connecting
+      3: standby
+      4: active
+  - name: fddimibPORTPCMState
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.21
+    type: gauge
+    help: The state of this Port's PCM state machine refer to ANSI SMT 9.6.2). - 1.3.6.1.2.1.10.15.73.5.2.1.21
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: pc0
+      2: pc1
+      3: pc2
+      4: pc3
+      5: pc4
+      6: pc5
+      7: pc6
+      8: pc7
+      9: pc8
+      10: pc9
+  - name: fddimibPORTPCWithhold
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.22
+    type: gauge
+    help: The value of PC_Withhold (refer to ANSI SMT 9.4.1). - 1.3.6.1.2.1.10.15.73.5.2.1.22
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: none
+      2: m-m
+      3: otherincompatible
+      4: pathnotavailable
+  - name: fddimibPORTLerFlag
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.23
+    type: gauge
+    help: The condition becomes active when the value of fddiPORTLerEstimate is less
+      than or equal to fddiPORTLerAlarm - 1.3.6.1.2.1.10.15.73.5.2.1.23
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibPORTHardwarePresent
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.24
+    type: gauge
+    help: This variable indicates the presence of underlying hardware support for
+      this Port object - 1.3.6.1.2.1.10.15.73.5.2.1.24
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: fddimibPORTAction
+    oid: 1.3.6.1.2.1.10.15.73.5.2.1.25
+    type: gauge
+    help: Causes a Control signal to be generated with a control_action of 'Signal'
+      and the 'variable' parameter set with the appropriate value (i.e., PC_Maint,
+      PC_Enable, PC_Disable, PC_Start, or PC_Stop) (refer to ANSI 9.4.2). - 1.3.6.1.2.1.10.15.73.5.2.1.25
+    indexes:
+    - labelname: fddimibPORTSMTIndex
+      type: gauge
+    - labelname: fddimibPORTIndex
+      type: gauge
+    enum_values:
+      1: other
+      2: maintPORT
+      3: enablePORT
+      4: disablePORT
+      5: startPORT
+      6: stopPORT
+  - name: frDlcmiIfIndex
+    oid: 1.3.6.1.2.1.10.32.1.1.1
+    type: gauge
+    help: The ifIndex value of the corresponding ifEn- try. - 1.3.6.1.2.1.10.32.1.1.1
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+  - name: frDlcmiState
+    oid: 1.3.6.1.2.1.10.32.1.1.2
+    type: gauge
+    help: This variable states which Data Link Connec- tion Management scheme is active
+      (and by impli- cation, what DLCI it uses) on the Frame Relay interface. - 1.3.6.1.2.1.10.32.1.1.2
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+    enum_values:
+      1: noLmiConfigured
+      2: lmiRev1
+      3: ansiT1-617-D
+      4: ansiT1-617-B
+  - name: frDlcmiAddress
+    oid: 1.3.6.1.2.1.10.32.1.1.3
+    type: gauge
+    help: This variable states which address format is in use on the Frame Relay interface.
+      - 1.3.6.1.2.1.10.32.1.1.3
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+    enum_values:
+      1: q921
+      2: q922March90
+      3: q922November90
+      4: q922
+  - name: frDlcmiAddressLen
+    oid: 1.3.6.1.2.1.10.32.1.1.4
+    type: gauge
+    help: This variable states which address length in octets - 1.3.6.1.2.1.10.32.1.1.4
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+    enum_values:
+      2: two-octets
+      3: three-octets
+      4: four-octets
+  - name: frDlcmiPollingInterval
+    oid: 1.3.6.1.2.1.10.32.1.1.5
+    type: gauge
+    help: This is the number of seconds between succes- sive status enquiry messages.
+      - 1.3.6.1.2.1.10.32.1.1.5
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+  - name: frDlcmiFullEnquiryInterval
+    oid: 1.3.6.1.2.1.10.32.1.1.6
+    type: gauge
+    help: Number of status enquiry intervals that pass before issuance of a full status
+      enquiry mes- sage. - 1.3.6.1.2.1.10.32.1.1.6
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+  - name: frDlcmiErrorThreshold
+    oid: 1.3.6.1.2.1.10.32.1.1.7
+    type: gauge
+    help: This is the maximum number of unanswered Status Enquiries the equipment
+      shall accept be- fore declaring the interface down. - 1.3.6.1.2.1.10.32.1.1.7
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+  - name: frDlcmiMonitoredEvents
+    oid: 1.3.6.1.2.1.10.32.1.1.8
+    type: gauge
+    help: This is the number of status polling intervals over which the error threshold
+      is counted - 1.3.6.1.2.1.10.32.1.1.8
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+  - name: frDlcmiMaxSupportedVCs
+    oid: 1.3.6.1.2.1.10.32.1.1.9
+    type: gauge
+    help: The maximum number of Virtual Circuits allowed for this interface - 1.3.6.1.2.1.10.32.1.1.9
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+  - name: frDlcmiMulticast
+    oid: 1.3.6.1.2.1.10.32.1.1.10
+    type: gauge
+    help: This indicates whether the Frame Relay inter- face is using a multicast
+      service. - 1.3.6.1.2.1.10.32.1.1.10
+    indexes:
+    - labelname: frDlcmiIfIndex
+      type: gauge
+    enum_values:
+      1: nonBroadcast
+      2: broadcast
+  - name: frCircuitIfIndex
+    oid: 1.3.6.1.2.1.10.32.2.1.1
+    type: gauge
+    help: The ifIndex Value of the ifEntry this virtual circuit is layered onto. -
+      1.3.6.1.2.1.10.32.2.1.1
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitDlci
+    oid: 1.3.6.1.2.1.10.32.2.1.2
+    type: gauge
+    help: The Data Link Connection Identifier for this virtual circuit. - 1.3.6.1.2.1.10.32.2.1.2
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitState
+    oid: 1.3.6.1.2.1.10.32.2.1.3
+    type: gauge
+    help: Indicates whether the particular virtual cir- cuit is operational - 1.3.6.1.2.1.10.32.2.1.3
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+    enum_values:
+      1: invalid
+      2: active
+      3: inactive
+  - name: frCircuitReceivedFECNs
+    oid: 1.3.6.1.2.1.10.32.2.1.4
+    type: counter
+    help: Number of frames received from the network in- dicating forward congestion
+      since the virtual circuit was created. - 1.3.6.1.2.1.10.32.2.1.4
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitReceivedBECNs
+    oid: 1.3.6.1.2.1.10.32.2.1.5
+    type: counter
+    help: Number of frames received from the network in- dicating backward congestion
+      since the virtual circuit was created. - 1.3.6.1.2.1.10.32.2.1.5
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitSentFrames
+    oid: 1.3.6.1.2.1.10.32.2.1.6
+    type: counter
+    help: The number of frames sent from this virtual circuit since it was created.
+      - 1.3.6.1.2.1.10.32.2.1.6
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitSentOctets
+    oid: 1.3.6.1.2.1.10.32.2.1.7
+    type: counter
+    help: The number of octets sent from this virtual circuit since it was created.
+      - 1.3.6.1.2.1.10.32.2.1.7
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitReceivedFrames
+    oid: 1.3.6.1.2.1.10.32.2.1.8
+    type: counter
+    help: Number of frames received over this virtual circuit since it was created.
+      - 1.3.6.1.2.1.10.32.2.1.8
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitReceivedOctets
+    oid: 1.3.6.1.2.1.10.32.2.1.9
+    type: counter
+    help: Number of octets received over this virtual circuit since it was created.
+      - 1.3.6.1.2.1.10.32.2.1.9
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitCreationTime
+    oid: 1.3.6.1.2.1.10.32.2.1.10
+    type: gauge
+    help: The value of sysUpTime when the virtual cir- cuit was created, whether by
+      the Data Link Con- nection Management Interface or by a SetRe- quest. - 1.3.6.1.2.1.10.32.2.1.10
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitLastTimeChange
+    oid: 1.3.6.1.2.1.10.32.2.1.11
+    type: gauge
+    help: The value of sysUpTime when last there was a change in the virtual circuit
+      state - 1.3.6.1.2.1.10.32.2.1.11
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitCommittedBurst
+    oid: 1.3.6.1.2.1.10.32.2.1.12
+    type: gauge
+    help: This variable indicates the maximum amount of data, in bits, that the network
+      agrees to transfer under normal conditions, during the measurement interval.
+      - 1.3.6.1.2.1.10.32.2.1.12
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitExcessBurst
+    oid: 1.3.6.1.2.1.10.32.2.1.13
+    type: gauge
+    help: This variable indicates the maximum amount of uncommitted data bits that
+      the network will at- tempt to deliver over the measurement interval - 1.3.6.1.2.1.10.32.2.1.13
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frCircuitThroughput
+    oid: 1.3.6.1.2.1.10.32.2.1.14
+    type: gauge
+    help: Throughput is the average number of 'Frame Re- lay Information Field' bits
+      transferred per second across a user network interface in one direction, measured
+      over the measurement inter- val - 1.3.6.1.2.1.10.32.2.1.14
+    indexes:
+    - labelname: frCircuitIfIndex
+      type: gauge
+    - labelname: frCircuitDlci
+      type: gauge
+  - name: frErrIfIndex
+    oid: 1.3.6.1.2.1.10.32.3.1.1
+    type: gauge
+    help: The ifIndex Value of the corresponding ifEn- try. - 1.3.6.1.2.1.10.32.3.1.1
+    indexes:
+    - labelname: frErrIfIndex
+      type: gauge
+  - name: frErrType
+    oid: 1.3.6.1.2.1.10.32.3.1.2
+    type: gauge
+    help: The type of error that was last seen on this interface. - 1.3.6.1.2.1.10.32.3.1.2
+    indexes:
+    - labelname: frErrIfIndex
+      type: gauge
+    enum_values:
+      1: unknownError
+      2: receiveShort
+      3: receiveLong
+      4: illegalDLCI
+      5: unknownDLCI
+      6: dlcmiProtoErr
+      7: dlcmiUnknownIE
+      8: dlcmiSequenceErr
+      9: dlcmiUnknownRpt
+      10: noErrorSinceReset
+  - name: frErrData
+    oid: 1.3.6.1.2.1.10.32.3.1.3
+    type: OctetString
+    help: An octet string containing as much of the er- ror packet as possible - 1.3.6.1.2.1.10.32.3.1.3
+    indexes:
+    - labelname: frErrIfIndex
+      type: gauge
+  - name: frErrTime
+    oid: 1.3.6.1.2.1.10.32.3.1.4
+    type: gauge
+    help: The value of sysUpTime at which the error was detected. - 1.3.6.1.2.1.10.32.3.1.4
+    indexes:
+    - labelname: frErrIfIndex
+      type: gauge
+  - name: frTrapState
+    oid: 1.3.6.1.2.1.10.32.4.1
+    type: gauge
+    help: This variable indicates whether the system produces the frDLCIStatusChange
+      trap. - 1.3.6.1.2.1.10.32.4.1
+    enum_values:
+      1: enabled
+      2: disabled
+  - name: usmStatsUnsupportedSecLevels
+    oid: 1.3.6.1.6.3.15.1.1.1
+    type: counter
+    help: The total number of packets received by the SNMP engine which were dropped
+      because they requested a securityLevel that was unknown to the SNMP engine or
+      otherwise unavailable. - 1.3.6.1.6.3.15.1.1.1
+  - name: usmStatsNotInTimeWindows
+    oid: 1.3.6.1.6.3.15.1.1.2
+    type: counter
+    help: The total number of packets received by the SNMP engine which were dropped
+      because they appeared outside of the authoritative SNMP engine's window. - 1.3.6.1.6.3.15.1.1.2
+  - name: usmStatsUnknownUserNames
+    oid: 1.3.6.1.6.3.15.1.1.3
+    type: counter
+    help: The total number of packets received by the SNMP engine which were dropped
+      because they referenced a user that was not known to the SNMP engine. - 1.3.6.1.6.3.15.1.1.3
+  - name: usmStatsUnknownEngineIDs
+    oid: 1.3.6.1.6.3.15.1.1.4
+    type: counter
+    help: The total number of packets received by the SNMP engine which were dropped
+      because they referenced an snmpEngineID that was not known to the SNMP engine.
+      - 1.3.6.1.6.3.15.1.1.4
+  - name: usmStatsWrongDigests
+    oid: 1.3.6.1.6.3.15.1.1.5
+    type: counter
+    help: The total number of packets received by the SNMP engine which were dropped
+      because they didn't contain the expected digest value. - 1.3.6.1.6.3.15.1.1.5
+  - name: usmStatsDecryptionErrors
+    oid: 1.3.6.1.6.3.15.1.1.6
+    type: counter
+    help: The total number of packets received by the SNMP engine which were dropped
+      because they could not be decrypted. - 1.3.6.1.6.3.15.1.1.6
+  - name: usmUserSpinLock
+    oid: 1.3.6.1.6.3.15.1.2.1
+    type: gauge
+    help: An advisory lock used to allow several cooperating Command Generator Applications
+      to coordinate their use of facilities to alter secrets in the usmUserTable.
+      - 1.3.6.1.6.3.15.1.2.1
+  - name: usmUserEngineID
+    oid: 1.3.6.1.6.3.15.1.2.2.1.1
+    type: OctetString
+    help: An SNMP engine's administratively-unique identifier - 1.3.6.1.6.3.15.1.2.2.1.1
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserName
+    oid: 1.3.6.1.6.3.15.1.2.2.1.2
+    type: DisplayString
+    help: A human readable string representing the name of the user - 1.3.6.1.6.3.15.1.2.2.1.2
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserSecurityName
+    oid: 1.3.6.1.6.3.15.1.2.2.1.3
+    type: DisplayString
+    help: A human readable string representing the user in Security Model independent
+      format - 1.3.6.1.6.3.15.1.2.2.1.3
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserAuthKeyChange
+    oid: 1.3.6.1.6.3.15.1.2.2.1.6
+    type: OctetString
+    help: An object, which when modified, causes the secret authentication key used
+      for messages sent on behalf of this user to/from the SNMP engine identified
+      by usmUserEngineID, to be modified via a one-way function - 1.3.6.1.6.3.15.1.2.2.1.6
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserOwnAuthKeyChange
+    oid: 1.3.6.1.6.3.15.1.2.2.1.7
+    type: OctetString
+    help: 'Behaves exactly as usmUserAuthKeyChange, with one notable difference: in
+      order for the set operation to succeed, the usmUserName of the operation requester
+      must match the usmUserName that indexes the row which is targeted by this operation
+      - 1.3.6.1.6.3.15.1.2.2.1.7'
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserPrivKeyChange
+    oid: 1.3.6.1.6.3.15.1.2.2.1.9
+    type: OctetString
+    help: An object, which when modified, causes the secret encryption key used for
+      messages sent on behalf of this user to/from the SNMP engine identified by usmUserEngineID,
+      to be modified via a one-way function - 1.3.6.1.6.3.15.1.2.2.1.9
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserOwnPrivKeyChange
+    oid: 1.3.6.1.6.3.15.1.2.2.1.10
+    type: OctetString
+    help: 'Behaves exactly as usmUserPrivKeyChange, with one notable difference: in
+      order for the Set operation to succeed, the usmUserName of the operation requester
+      must match the usmUserName that indexes the row which is targeted by this operation
+      - 1.3.6.1.6.3.15.1.2.2.1.10'
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserPublic
+    oid: 1.3.6.1.6.3.15.1.2.2.1.11
+    type: OctetString
+    help: A publicly-readable value which can be written as part of the procedure
+      for changing a user's secret authentication and/or privacy key, and later read
+      to determine whether the change of the secret was effected. - 1.3.6.1.6.3.15.1.2.2.1.11
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+  - name: usmUserStorageType
+    oid: 1.3.6.1.6.3.15.1.2.2.1.12
+    type: gauge
+    help: The storage type for this conceptual row - 1.3.6.1.6.3.15.1.2.2.1.12
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+    enum_values:
+      1: other
+      2: volatile
+      3: nonVolatile
+      4: permanent
+      5: readOnly
+  - name: usmUserStatus
+    oid: 1.3.6.1.6.3.15.1.2.2.1.13
+    type: gauge
+    help: The status of this conceptual row - 1.3.6.1.6.3.15.1.2.2.1.13
+    indexes:
+    - labelname: usmUserEngineID
+      type: OctetString
+    - labelname: usmUserName
+      type: DisplayString
+    enum_values:
+      1: active
+      2: notInService
+      3: notReady
+      4: createAndGo
+      5: createAndWait
+      6: destroy
+  - name: snmpEngineID
+    oid: 1.3.6.1.6.3.10.2.1.1
+    type: OctetString
+    help: An SNMP engine's administratively-unique identifier. - 1.3.6.1.6.3.10.2.1.1
+  - name: snmpEngineBoots
+    oid: 1.3.6.1.6.3.10.2.1.2
+    type: gauge
+    help: The number of times that the SNMP engine has (re-)initialized itself since
+      snmpEngineID was last configured. - 1.3.6.1.6.3.10.2.1.2
+  - name: snmpEngineTime
+    oid: 1.3.6.1.6.3.10.2.1.3
+    type: gauge
+    help: The number of seconds since the value of the snmpEngineBoots object last
+      changed - 1.3.6.1.6.3.10.2.1.3
+  - name: snmpEngineMaxMessageSize
+    oid: 1.3.6.1.6.3.10.2.1.4
+    type: gauge
+    help: The maximum length in octets of an SNMP message which this SNMP engine can
+      send or receive and process, determined as the minimum of the maximum message
+      size values supported among all of the transports available to and supported
+      by the engine. - 1.3.6.1.6.3.10.2.1.4
+  - name: snmpSetSerialNo
+    oid: 1.3.6.1.6.3.1.1.6.1
+    type: gauge
+    help: An advisory lock used to allow several cooperating SNMPv2 entities, all
+      acting in a manager role, to coordinate their use of the SNMPv2 set operation
+      - 1.3.6.1.6.3.1.1.6.1
+  version: 3
+  auth:
+    security_level: authPriv
+    username: infra
+    password: pr1m4r1.+
+    auth_protocol: MD5
+    priv_protocol: AES
+    priv_password: c15c0.1nfr4
