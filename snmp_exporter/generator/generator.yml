@@ -39,20 +39,19 @@ modules:
       - 1.3.6.1.3.94.1.6
 
   if-mib-2060:
-    default:
-     version: 3
-      auth:
-        username: infra
-        password: pr1m4r1.+
-        auth_protocol: MD5
-        priv_protocol: AES
-        security_level: authPriv
-        priv_password: c15c0.1nfr4
      walk:
       - 1.3.6.1.2.1.31
       - 1.3.6.1.2.1.2
       - 1.3.6.1.6
-     lookups:
+    version: 3
+    auth:
+     username: infra
+     password: pr1m4r1.+
+     auth_protocol: MD5
+     priv_protocol: AES
+     security_level: authPriv
+     priv_password: c15c0.1nfr4  
+    lookups:
       - source_indexes: [ifIndex]
         lookup: ifAlias
       - source_indexes: [ifIndex]
