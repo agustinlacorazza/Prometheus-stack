@@ -1,7 +1,7 @@
 default:
-  vsphere_host: 192.168.18.80
-  vsphere_user: 'root'
-  vsphere_password: 'pr1m4r1*'
+  vsphere_host: "vcenter.example.local"
+  vsphere_user: "readonly-user"
+  vsphere_password: "change-me"
   ignore_ssl: True
   specs_size: 5000
   collect_only:
@@ -12,9 +12,9 @@ default:
     snapshots: True
 
 esx:
-  vsphere_host: 192.168.18.80
-  vsphere_user: 'root'
-  vsphere_password: 'pr1m4r1*'
+  vsphere_host: "vcenter.example.local"
+  vsphere_user: "readonly-user"
+  vsphere_password: "change-me"
   ignore_ssl: True
   specs_size: 5000
   collect_only:
