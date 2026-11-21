@@ -58,4 +58,4 @@ credential that was ever used with them must be treated as exposed and **rotated
 - `hp-msa-exporter/`: HPMSA Exporter. No licence file was included in the copy kept here; check the upstream project
   before reusing it.
 
-The files that are not from those projects are my own configuration and dashboards.
+The files that are not from those projects are my own configuration and dashboards, released under the MIT licence (see `LICENSE`). The copied projects keep their own licences.
